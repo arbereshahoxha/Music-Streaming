@@ -1,0 +1,21 @@
+body{
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+}
+header{
+    background-color: rgb(13, 18, 57);
+    height: 75px;
+
+}
+#LogIn{
+    text-align: end;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 70px;
+    height: 25px;
+    text-align: center;
+    background-color: rgb(100, 50, 96);
+    border: none;
+}
