@@ -1,9 +1,9 @@
 body {
-    background-color: #151828;
+    background-color: #111111;
 }
 
 header {
-    background-color: #1A9A5F;
+    background-color: #302c3e;
     padding: 0;
     margin: 0;
     height: 90px;
@@ -14,21 +14,44 @@ main {
     margin: 0;
 }
 
-.sidebanner {
+.loginbanner {
     margin-left: 10%;
     margin-right: 60%;
-    background-color: #F59418;
+    background-color: #181523;
     height: 100%;
+    color: white;
+    border: solid 1px #2b2b2b;
+    text-align:center;
 }
 
-.sidebanner h1 {
-    margin: 0 10%;
+.loginbanner h1 {
+    margin-top: 10px;
     padding: 10px 0;
     text-align: center;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.loginbanner p {
+    text-align: left;
+    margin: 10% 0 0 20%;
+}
+
+.loginbanner input {
+    width:80%;
+    margin: 5px 0px;
+    height: 35px;
+    border: solid #2b2b2b;
+    border-radius: 10px;
+}
+.loginbanner button {
+    margin: 30px 20px;
+    background-color: rgb(170, 119, 218);
+    border: solid #111111;
+    border-radius: 10px;
+    height: 40px;
+    width: 70%;
+}
 h1 {
     padding: 0;
     margin: 0;
