@@ -1,0 +1,47 @@
+body{
+    background-color: #10102ad0;
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+}
+#all{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+.kanget{
+    background-color:rgba(17, 17, 37, 0.816);
+    margin: 10px;
+    border-style: groove;
+    border-radius: 8px;
+    border: solid #10102ad0;
+    width: 150px;
+    height: 250px;
+}
+.kanget > img{
+    height: 100px;
+    width: 100px;
+    margin: 15px;
+    border-radius: 10px;
+}
+.kanget > h2{
+    text-wrap: wrap;
+    color: rgb(193, 205, 215);
+} 
+.kanget > p{
+    margin: auto;
+    color: rgb(56, 90, 120);
+}
+header{
+    height: 75px;
+    background-color: #0D1239;
+}
+header img{
+    height: 40px;
+    width: 40px;
+    padding: 20px;
+}
