@@ -2,30 +2,46 @@
     <head>
         <title>Loginpage</title>
         <link rel="stylesheet" href="loginstyle.css">
-
-    </head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;700;800&family=Varela+Round&display=swap" rel="stylesheet">
 
     <body>
-        <header>
-            <div class="navbar">
-                <h1>Navbar</h1>
+        <div class="container">
+            <div class="loginBlock">
+                <div class="topLogin">
+                    <img src="Logot/CyanLogo.png" alt="Logo" class="logo">
+                    <h3>Music Streaming</h3>
+                </div>
+
+                <div class="mainLogin">
+                    <h1>Login to Your Account</h1>
+                    <p>Login using social networks</p>
+
+                    <div class="socialMediaIcons">
+                        <a href=""><img src="Logot/google.png" alt="Google"></a>
+                        <a href=""><img src="Logot/facebook.png" alt="Facebook"></a>
+                        <a href=""><img src="Logot/linkedin.png" alt="LinkedIn"></a>
+                    </div>
+                    <div class="hrBreak">
+                        <hr>
+                        <p>OR</p>
+                        <hr>
+                    </div>
+
+                    <div class="loginForm">
+                        <input type="text" id="email" placeholder="Email">
+                        <input type="password" id="password" placeholder="Password">
+                        <button>Log In</button>
+                    </div>
+                </div>
+                
             </div>
-        </header>
 
-        <main>
-            <div class="loginbanner">
-                <h1>Log in</h1>
-                <hr><br>
-
-                <p>Email:</p>
-                <input type="text"> 
-                <br>
-                <p>Password:</p>
-                <input type="password">
-                <br>
-
-                <a href="homepage.html"><button>Log in</button></a>
+            <div class="signUpBlock">
+                <p>right Block</p>
             </div>
-        </main>
+        </div>
+        
     </body>
 </html>

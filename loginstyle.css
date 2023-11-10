@@ -1,58 +1,114 @@
-body {
-    background-color: #111111;
-}
-
-header {
-    background-color: #302c3e;
-    padding: 0;
+body, html{
     margin: 0;
-    height: 90px;
-}
-
-main {
     padding: 0;
-    margin: 0;
-}
-
-.loginbanner {
-    margin-left: 10%;
-    margin-right: 60%;
-    background-color: #181523;
     height: 100%;
-    color: white;
-    border: solid 1px #2b2b2b;
-    text-align:center;
+    /* font-family: 'Varela Round', sans-serif;  More playful Font*/ 
+    font-family: 'Sora', sans-serif; /*Harsher font*/
 }
 
-.loginbanner h1 {
-    margin-top: 10px;
-    padding: 10px 0;
+.container {
+    display: flex;
+    height: 100vh;
+}
+.loginBlock {
+    background: E3FDFD;
+    width: 60%;
     text-align: center;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
-.loginbanner p {
-    text-align: left;
-    margin: 10% 0 0 20%;
+.topLogin {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px
 }
 
-.loginbanner input {
-    width:80%;
-    margin: 5px 0px;
-    height: 35px;
-    border: solid #2b2b2b;
-    border-radius: 10px;
+.mainLogin {
+    margin-top: 100px
 }
-.loginbanner button {
-    margin: 30px 20px;
-    background-color: rgb(170, 119, 218);
-    border: solid #111111;
-    border-radius: 10px;
-    height: 40px;
-    width: 70%;
+.mainLogin p {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color:rgb(99, 99, 99);
+    font-size: 13px;
 }
-h1 {
-    padding: 0;
+
+.mainLogin h1 {
+    color: rgb(46, 46, 46);
     margin: 0;
+    font-size: 40px;
+}
+
+.topLogin h3 {
+    color: rgb(46, 46, 46);
+}
+
+.hrBreak {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hrBreak hr {
+    height: 0px;
+    width: 30%;
+    margin: 0 3px;
+    border: 0.5px solid #ccc;
+}
+.hrBreak p {
+    margin: 0;
+    color: #616161;
+    font-size: 10px;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.loginForm input {
+    width: 65%;
+    height: 40px;
+    margin: 10px;
+    border: solid 1px #ccc;
+    border-radius: 30px;
+}
+
+.loginForm button {
+    margin-top: 8px;
+    width: 35%;
+    height: 35px;
+    border: solid 1px #64b6ba;
+    border-radius: 30px;
+    background-color: #71C9CE;
+}
+
+#email::placeholder {
+    color: #ccc;
+    font-style: bold;
+    text-align: left;
+    padding-left: 20px;
+}
+#password::placeholder {
+    color: #ccc;
+    font-style: bold;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.logo {
+    width:40px;
+    padding: 10px;
+}
+.socialMediaIcons img {
+    width: 35px;
+    margin: 0;
+    padding: 0 5px;
+}
+
+.signUpBlock {
+    background-color: 71C9CE;
+    width: 40%;
 }
