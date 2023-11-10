@@ -8,12 +8,16 @@ body, html{
 
 .container {
     display: flex;
-    height: 100vh;
+    height: 100%;
+    padding:0;
+    margin:0;
 }
 .loginBlock {
     background: E3FDFD;
     width: 60%;
     text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
 .topLogin {
@@ -23,19 +27,23 @@ body, html{
 }
 
 .mainLogin {
-    margin-top: 100px
+    margin-top: 15%;
+    margin-bottom: 30%;
 }
 .mainLogin p {
     margin-top: 5px;
     margin-bottom: 20px;
     color:rgb(99, 99, 99);
-    font-size: 13px;
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 70px;
 }
 
 .mainLogin h1 {
     color: rgb(46, 46, 46);
     margin: 0;
-    font-size: 40px;
 }
 
 .topLogin h3 {
@@ -51,7 +59,7 @@ body, html{
 
 .hrBreak hr {
     height: 0px;
-    width: 30%;
+    width: 35%;
     margin: 0 3px;
     border: 0.5px solid #ccc;
 }
@@ -70,7 +78,7 @@ body, html{
 
 .loginForm input {
     width: 65%;
-    height: 40px;
+    height: 55px;
     margin: 10px;
     border: solid 1px #ccc;
     border-radius: 30px;
@@ -79,27 +87,32 @@ body, html{
 .loginForm button {
     margin-top: 8px;
     width: 35%;
-    height: 35px;
+    height: 55px;
     border: solid 1px #64b6ba;
     border-radius: 30px;
     background-color: #71C9CE;
+    color: #E3FDFD;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Sora', sans-serif;
 }
 
 #email::placeholder {
-    color: #ccc;
+    color: #afafaf;
     font-style: bold;
-    text-align: left;
+    text-align: center;
     padding-left: 20px;
 }
 #password::placeholder {
-    color: #ccc;
+    color: #afafaf;
     font-style: bold;
-    text-align: left;
+    text-align: center;
     padding-left: 20px;
 }
 
 .logo {
     width:40px;
+    height: 40px;
     padding: 10px;
 }
 .socialMediaIcons img {
@@ -109,6 +122,41 @@ body, html{
 }
 
 .signUpBlock {
-    background-color: 71C9CE;
+    background-color: #71C9CE;
     width: 40%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:0;
+    margin:0;
+}
+.signUpMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%
+}
+.signUpMain h1 {
+    color: #fdffff;
+    margin: 15px 0;
+}
+.signUpMain p {
+    color: #e3fdfd;
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.signupMain button {
+    margin-top: 15px;
+    width: 70%;
+    height: 55px;
+    border: solid 1px #d8f5f5;
+    border-radius: 30px;
+    background-color: #e3fdfd;
+    color: #71C9CE;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Sora', sans-serif;
 }
