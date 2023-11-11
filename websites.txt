@@ -1,2 +1,10 @@
 Palette:
 https://colorhunt.co/palette/e3fdfdcbf1f5a6e3e971c9ce
+
+Palette - AH:
+its BLACKKKK all the way hehee
+
+
+E portokallta/ kuqe:
+    background: rgb(225,12,12);
+    background: radial-gradient(circle, rgba(225,12,12,0.8565477216277135) 0%, rgba(169,27,27,1) 41%, rgba(71,11,11,1) 100%);

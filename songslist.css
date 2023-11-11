@@ -1,5 +1,5 @@
 body{
-    background-color: #10102ad0;
+    background-color: #071212;
     margin:0;
     padding:0;
     height:100%;
@@ -9,16 +9,17 @@ body{
     display: flex;
     flex-wrap: wrap;
     margin: 0px;
+    justify-content: center;
     text-align: center;
     margin: auto;
     padding: 10px;
 }
 .kanget{
-    background-color:rgba(17, 17, 37, 0.816);
+    background-color:  #1a1a1a;
     margin: 10px;
     border-style: groove;
     border-radius: 8px;
-    border: solid #10102ad0;
+    border: none;
     width: 150px;
     height: 250px;
 }
@@ -30,15 +31,15 @@ body{
 }
 .kanget > h2{
     text-wrap: wrap;
-    color: rgb(193, 205, 215);
+    color: #a6a6a6;
 } 
 .kanget > p{
     margin: auto;
-    color: rgb(56, 90, 120);
+    color: #4d4d4d;
 }
 header{
     height: 75px;
-    background-color: #0D1239;
+    background-color: black;
 }
 header img{
     height: 40px;

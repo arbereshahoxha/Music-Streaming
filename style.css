@@ -3,60 +3,66 @@ body{
     padding:0;
     height:100%;
     width:100%;
+    background-color: rgb(6, 16, 16);
 }
 header{
-    background-color: rgb(13, 18, 57);
-    height: 75px;
+    background-color: black;
+    height: 80px;
+    display: flex;
+    justify-content: end;
 
 }
 #LogIn{
-    text-align: end;
     margin-top: 10px;
     border-radius: 10px;
     width: 70px;
     height: 25px;
     text-align: center;
-    background-color: rgb(100, 50, 96);
     border: none;
-}
-body{
-    background-color: rgb(19, 7, 44);
 }
 .classifications{   
     width: 500px;
     height: 250px;
     margin: auto;
     margin-top: 100px;
-    color: bisque;
+    color: #071212;
     text-align: center;
+}
+a{
+    text-decoration: none;
+    color: #071212;
 }
 #fav-song{
     display: flex;
     justify-content: center;
-    align-items: center;
-    background: linear-gradient(5deg,#5e173a 8.75%, #d95798 97.40%);
+    align-items: center;  
+    background: rgb(154,49,206);
+    background: radial-gradient(circle, rgba(154,49,206,1) 0%, rgba(52,20,86,1) 100%);
     border-radius: 30px;
 }
 #new-releases{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(40deg,#002080 10.75%,  #6666ff 95.40%);
-    background-color: rgb(209, 100, 200);
+    background: rgb(218,36,179);
+    background: radial-gradient(circle, rgba(218,36,179,0.8565477216277135) 0%, rgba(78,3,58,1) 100%);
     border-radius: 30px;
 }
 #podcast{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(55.8deg,#003300 9.75%, #006600 95.44%);
+    background: rgb(80,166,111);
+    background: radial-gradient(circle, rgba(80,166,111,0.8565477216277135) 0%, rgba(16,60,19,1) 100%);
     border-radius: 30px;
 }
 #news{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(57.8deg,#6600cc 9.75%,#6d257e 95.44%);
+    background: rgb(36,121,218);
+    background: radial-gradient(circle, rgba(36,121,218,0.8565477216277135) 0%, rgba(11,24,109,1) 100%);
     border-radius: 30px;
 }
+
 
