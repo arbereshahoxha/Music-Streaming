@@ -19,6 +19,7 @@ header{
     height: 25px;
     text-align: center;
     border: none;
+    background-color: #330033;
 }
 .classifications{   
     width: 500px;
