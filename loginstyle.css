@@ -1,7 +1,7 @@
 body, html{
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: auto;
     /* font-family: 'Varela Round', sans-serif;  More playful Font*/ 
     font-family: 'Sora', sans-serif; /*Harsher font*/
 }
@@ -28,13 +28,14 @@ body, html{
 }
 .container {
     display: flex;
-    height: 100%;
+    height: auto;
     padding:0;
     margin:0;
 }
 .loginBlock {
     background: #140014;
     width: 60%;
+    height: auto;
     text-align: center;
     padding: 0;
     margin: 0;
@@ -161,6 +162,7 @@ h1 {
     align-items: center;
     padding:0;
     margin:0;
+    height: auto;
 }
 .signUpMain {
     display: flex;

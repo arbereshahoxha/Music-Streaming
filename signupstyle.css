@@ -1,7 +1,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: auto;
     font-family: 'Sora', sans-serif;
 }
 
@@ -11,7 +11,7 @@ h1 {
 
 .container {
     display: flex;
-    height: 100%;
+    height: auto;
     padding: 0;
     margin: 0;
 }
@@ -19,6 +19,7 @@ h1 {
 .loginBlock {
     background-color: #9803ac;
     width: 40%;
+    height: auto;
 }
 
 .signUpBlock {
@@ -27,6 +28,7 @@ h1 {
     text-align: center;
     padding: 0;
     margin: 0;
+    height: auto;
 }
 
 .topSignUp {
