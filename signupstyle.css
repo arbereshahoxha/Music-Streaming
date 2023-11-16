@@ -1,8 +1,28 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: auto;
+    height: 100%;
     font-family: 'Sora', sans-serif;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+
+    .container .loginBlock {
+        width: 100%;
+        height: auto;
+        order: 2;
+        padding: 30% 0;
+    }
+    .container .signUpBlock {
+        width: 100%;
+        height: auto;
+    }
 }
 
 h1 {
@@ -11,7 +31,7 @@ h1 {
 
 .container {
     display: flex;
-    height: auto;
+    height: 100%;
     padding: 0;
     margin: 0;
 }
@@ -20,6 +40,8 @@ h1 {
     background-color: #9803ac;
     width: 40%;
     height: auto;
+    padding: 0;
+    margin: 0;
 }
 
 .signUpBlock {
