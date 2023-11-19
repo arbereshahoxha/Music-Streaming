@@ -1,0 +1,69 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Sora', sans-serif;
+    height: 100%;
+    background-color: #140014;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    color: white;
+    height: 100%;
+    margin: 0;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    width: 225px;
+    height: 225px;
+    padding: 0;
+    margin: 15px;
+}
+
+.genre {
+    display: flex;
+    flex-direction: column;
+    background-color: #837f83;
+    width: 100%;
+    height: 100%;;
+    border-radius: 10px;
+}
+
+.genre p {
+    padding-left: 7%;
+    padding-top: 2%;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0 0 0;
+}
+
+#Trending {
+    background-color: rgb(253, 4, 25);
+}
+#For-You {
+    background-color: rgb(22, 194, 6);
+}
+#Pop {
+    background-color: rgb(4, 162, 253);
+}
+#Hip-Hop {
+    background-color: rgb(255, 102, 0)
+}
+#Mood {
+    background-color: rgb(52, 9, 102);
+}
+#Party {
+    background-color: rgb(255, 105, 175)
+}
+#Electronic {
+    background-color: magenta;
+}
+
