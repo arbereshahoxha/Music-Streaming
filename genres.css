@@ -6,6 +6,11 @@ html, body {
     background-color: #140014;
 }
 
+h1 {
+    color: white;
+    margin: 30px 0 0px 40px;
+}
+
 
 .container {
     display: flex;
