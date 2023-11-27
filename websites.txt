@@ -8,3 +8,89 @@ its BLACKKKK all the way hehee
 E portokallta/ kuqe:
     background: rgb(225,12,12);
     background: radial-gradient(circle, rgba(225,12,12,0.8565477216277135) 0%, rgba(169,27,27,1) 41%, rgba(71,11,11,1) 100%);
+
+
+OLD HOMEPAGE
+    <header>
+                <div>
+                <a href="loginpage.html"><input type="button" value="LogIn" id="LogIn"></a>
+                <a href="signuppage.html"><input type="button" value="SignUp" id="LogIn"></a>    
+            </div>
+        </header>
+        <main>
+            <div class="classifications" id="fav-song">
+                <a href="songslist.html"><h1>Top Picks</h1></a>
+            </div>
+            <div class="classifications" id="new-releases">
+                <a href="popular-artist.html"><h1>Popular Artists</h1></a>
+            </div>
+            <div class="classifications" id="podcast">
+                <a href="genres.html"><h1>Genres</h1></a>
+            </div>
+            <div class="classifications" id="news">
+                <a href="latest-news.html"><h1>Latest News</h1></a>
+            </div>
+        </main>
+        <hr>
+        <footer>
+            
+        </footer>
+//////CSSSSS
+
+ body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Sora', sans-serif;
+    overflow: hidden; /*Nuk len me bo scroll*/
+    background-color: #140014;
+    color: white;
+}
+
+.mainContainer {
+    margin: 0;
+    padding: 0;
+    height: 90%;
+    width: 100%;
+    display: flex;
+}
+
+.mainSideBar {
+    height: 100%;
+    width: 20%;
+    background-color: red;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sideElement {
+    background-color: #200020;
+    border-radius: 5px;
+    width: 90%;
+    height: auto;
+    margin: 10px;
+}
+
+.sideElement ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+.sideElement li {
+    margin: 0;
+    padding: 15px 0;
+}
+
+.dynamicContent {
+    height:100%;
+    width: 80%;
+}
+
+.mediaBar {
+    height: 10%;
+}

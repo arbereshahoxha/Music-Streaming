@@ -4,6 +4,7 @@ body{
     padding:0;
     height:100%;
     width:100%;
+    font-family: 'Sora', sans-serif;
 }
 #all{
     display: flex;
@@ -12,30 +13,35 @@ body{
     justify-content: center;
     text-align: center;
     margin: auto;
-    padding: 10px;
+    padding: 2px;
 }
 .kanget{
-    background-color:  #1a1a1a;
-    margin: 10px;
+    /* margin: 10px; */
     border-style: groove;
     border-radius: 8px;
     border: none;
     width: 150px;
-    height: 250px;
+    height: 220px;
+    margin-top: 10px;
 }
 .kanget > img{
     height: 100px;
     width: 100px;
-    margin: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 25px;
     border-radius: 10px;
 }
 .kanget > h2{
     text-wrap: wrap;
-    color: #a6a6a6;
+    color: white;
+    font-size: 20px;
 } 
 .kanget > p{
     margin: auto;
     color: #4d4d4d;
+    font-size: 10px;
+    margin-top: -10px;
 }
 header{
     height: 75px;
@@ -45,4 +51,10 @@ header img{
     height: 40px;
     width: 40px;
     padding: 20px;
+}
+.kanget:hover{
+    background-color: #262626;
+}
+.kanget:hover img{
+    transform: scale(1.2);
 }

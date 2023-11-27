@@ -1,0 +1,232 @@
+body,html{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Sora', sans-serif;
+}
+header{
+    background-color: blue;
+    height: 100px;
+    
+}
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+}
+main{
+    height: 100%;
+
+}
+#main-content{
+    display: flex;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+#nav-bar{
+    padding: 40px;
+    background-color: black;
+    color: white;
+    width: 250px
+}
+#nav-bar > a{
+    text-decoration: none;
+    color: white;
+}
+#categories{
+    background-color: #1a1a1a;
+    color: black;
+    width: 100%;
+    /* max-width: 100%;
+    padding: 10px; */
+    overflow-x: hidden;
+    overflow-y: scroll;
+    
+}
+/* Songs */
+#songs{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+    /* padding: 2px; */
+}
+.see-all > a{
+    /* padding: 20px; */
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+    justify-content: flex-end;
+	align-items: flex-start;
+	align-content: stretch;
+    margin: 10px;
+}
+.kanget{
+    /* margin: 10px; */
+    border-style: groove;
+    border-radius: 8px;
+    border: none;
+    width: 150px;
+    height: 220px;
+    margin-top: 10px;
+}
+.kanget > img{
+    height: 100px;
+    width: 100px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+.kanget > h2{
+    text-wrap: wrap;
+    color: white;
+    font-size: 20px;
+} 
+.kanget > p{
+    margin: auto;
+    color: #4d4d4d;
+    font-size: 10px;
+    margin-top: -10px;
+}
+header{
+    height: 75px;
+    background-color: black;
+}
+header img{
+    height: 40px;
+    width: 40px;
+    padding: 20px;
+}
+.kanget:hover{
+    background-color: #262626;
+}
+.kanget:hover img{
+    transform: scale(1.2);
+}
+/* Genres */
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-content: flex-start; */
+    color: white;
+    height: 70px;
+    margin: 0;
+}
+
+.container > a {
+    text-decoration: none;
+    color: white;
+    width: 200px;
+    height: 200px;
+    padding: 0;
+    /* margin: px; */
+}
+
+.genre {
+    display: flex;
+    flex-direction: column;
+    background-color: #837f83;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.genre p {
+    padding-left: 7%;
+    padding-top: 2%;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0 0 0;
+}
+
+#Trending {
+    background-color: rgb(253, 4, 25);
+}
+#For-You {
+    background-color: rgb(22, 194, 6);
+}
+#Pop {
+    background-color: rgb(4, 162, 253);
+}
+#Hip-Hop {
+    background-color: rgb(255, 102, 0)
+}
+
+/* Artists */
+#artists{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+.artist{
+    display: flex;
+    text-align: center;
+    margin: 10px;
+}
+/* .artist > img{
+    height: 70px;
+    width: 70px;
+    margin: 15px;
+    border-radius: 10px;
+
+} */
+.artist{
+    position: relative;
+    margin-top: 100px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.artist > img{
+    width: 150px;
+    height: 150px;
+    transition: 0.3s ease;
+    margin: 15px;
+    border-radius: 10px;
+}
+.description{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease;
+    opacity: 0;
+    color:  #bfbfbf;
+}
+.description h2{
+    color: #fff;
+    font-size: 45px;
+    text-align: center;
+    margin-top: 50px;
+}
+.artist:hover img{
+    transform: scale(1.5);
+}
+.artist:hover .description{
+    opacity: 1;
+}
+#info{
+    background-color: #333333;
+    color:#666666;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+}
