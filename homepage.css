@@ -7,7 +7,6 @@ body,html{
 header{
     background-color: blue;
     height: 100px;
-    
 }
 body{
     overflow-x: hidden;
@@ -19,7 +18,6 @@ body{
 }
 main{
     height: 100%;
-
 }
 #main-content{
     display: flex;
@@ -41,8 +39,6 @@ main{
     background-color: #1a1a1a;
     color: black;
     width: 100%;
-    /* max-width: 100%;
-    padding: 10px; */
     overflow-x: hidden;
     overflow-y: scroll;
     
@@ -51,11 +47,10 @@ main{
 #songs{
     display: flex;
     flex-wrap: wrap;
-    margin: 20px;
+    margin: 10px;
     padding: 10px;
     justify-content: center;
     text-align: center;
-    /* padding: 2px; */
 }
 .see-all > a{
     /* padding: 20px; */
@@ -119,30 +114,27 @@ header img{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    /* align-content: flex-start; */
     color: white;
-    height: 70px;
-    margin: 0;
+    /* height: 200px; */
+    margin: 20px;
+    padding: 10px;
 }
 
-.container > a {
+.genre-box > a {
     text-decoration: none;
     color: white;
     width: 200px;
     height: 200px;
     padding: 0;
-    /* margin: px; */
 }
-
-.genre {
+.genre-box{
     display: flex;
     flex-direction: column;
-    background-color: #837f83;
+    border-radius: 10px;
     width: 150px;
     height: 150px;
-    border-radius: 10px;
+    margin-right: 20px;
 }
-
 .genre p {
     padding-left: 7%;
     padding-top: 2%;
@@ -163,21 +155,27 @@ header img{
 #Hip-Hop {
     background-color: rgb(255, 102, 0)
 }
+#Mood {
+    background-color: rgb(52, 9, 102);
+}
 
 /* Artists */
 #artists{
     display: flex;
     flex-wrap: wrap;
-    margin: 0px;
     justify-content: center;
     text-align: center;
-    margin: auto;
+    margin: 25px;
     padding: 10px;
 }
 .artist{
     display: flex;
     text-align: center;
-    margin: 10px;
+    /* margin: 10px; */
+    position: relative;
+    /* margin-top: 100px; */
+    cursor: pointer;
+    overflow: hidden;
 }
 /* .artist > img{
     height: 70px;
@@ -186,12 +184,7 @@ header img{
     border-radius: 10px;
 
 } */
-.artist{
-    position: relative;
-    margin-top: 100px;
-    cursor: pointer;
-    overflow: hidden;
-}
+
 .artist > img{
     width: 150px;
     height: 150px;

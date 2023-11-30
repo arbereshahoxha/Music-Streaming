@@ -40,7 +40,7 @@
                         <hr>
                     </div>
 
-                    <div class="signUpForm">
+                    <div class="signUpForm" onclick="return validateForm()">
                         <input type="text" id="name" placeholder="Your First & Last Name" required>
                         <select required>
                             <option value="" disabled selected>Your Gender</option>
@@ -50,10 +50,11 @@
                         <input type="text" id="email" placeholder="Your Email" required>
                         <input type="password" id="password" placeholder="Your Password" required>
                         <input type="password" id="passwordConfirm" placeholder="Confirm Your Password" required>
-                        <a href="homepage.html"><button>Sign Up</button></a>
+                        <button type="submit">Sign Up</button>
                     </div>
                 </div>
             </div>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>
