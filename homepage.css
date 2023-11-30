@@ -1,20 +1,18 @@
 body,html{
     height: 100%;
     width: 100%;
+    margin:0;
+    /* padding:0; */
     overflow: hidden;
     font-family: 'Sora', sans-serif;
 }
 header{
     background-color: blue;
-    height: 100px;
+    height: 200px;
 }
 body{
     overflow-x: hidden;
     overflow-y: scroll;
-    margin:0;
-    padding:0;
-    height:100%;
-    width:100%;
 }
 main{
     height: 100%;
@@ -33,6 +31,9 @@ main{
 }
 #nav-bar > a{
     text-decoration: none;
+    color: rgb(97, 87, 87);
+}
+#nav-bar > a:hover{
     color: white;
 }
 #categories{
