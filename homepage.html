@@ -28,32 +28,32 @@
                 </div>
                 <!-- Songs -->
                 <div id="songs">
-                <div class="kanget">
+                <div class="kanget" onclick="playSong('songs/ElaiUnMeTy.mp3')">
                     <img src="Fotot/un-me-ty.png">
                     <h2>Un Me Ty</h2>
                     <p>Elai</p>
                 </div>
-                <div class="kanget">
+                <div class="kanget" onclick="playSong('songs/ElaiJoti.mp3')">
                     <img src="Fotot/Joti.png">
                     <h2>Joti</h2>
                     <p>Elai</p>
                 </div>
-                <div class="kanget">
+                <div class="kanget" onclick="playSong('songs/YllLimaniDafinaZeqiriKaje.mp3')">
                     <img src="Fotot/kaje.png">
                     <h2>Kaje</h2>
                     <p>Yll Limani, Dafina Zeqiri</p>
                 </div>
-                <div class="kanget">
+                <div class="kanget" onclick="playSong('songs/YllLimaniPerKonJeZbukuru.mp3')">
                     <img src="Fotot/per-kon-je-zbukuru.jpg">
                     <h2>Per kon je zbukuru</h2>
                     <p>Yll Limani</p>
                 </div>
-                <div class="kanget">
+                <div class="kanget" onclick="playSong('songs/YllLimaniMeJetu.mp3')">
                     <img src="Fotot/me-jetu.jpg">
                     <h2>Me Jetu</h2>
                     <p>Yll Limani</p>
                 </div>
-                <div class="kanget">
+                <div class="kanget" onclick="playSong('songs/DhurataDoraElvanaGjataGajde.mp3')">
                     <img src="Fotot/Gajde.png">
                     <h2>Gajde</h2>
                     <p>Dhurata Dora,Elvana Gjata</p>
@@ -63,9 +63,9 @@
                 <div class="see-all">
                     <a href="genres.html">See all</a>
                 </div>
+
                 <!-- Genres -->
-                <!-- <div id="genres"> -->
-                    <div class="container">
+                <div id="genres">
                         <div class="genre-box" id="Trending">
                         <a href="songslist.html">
                             <div class="genre">
@@ -105,7 +105,7 @@
                             </div>
                         </a>
                         </div>
-                    </div>
+                </div>
 
                 <div class="see-all">
                     <a href="popular-artist.html">See all</a>
@@ -156,6 +156,13 @@
             </div>
 
         </div>
+        <div id="mediaPlayer">
+                <audio controls id="player">
+                    <source src="" type="audio/mp3">
+                    Your browser does not support audio.
+                </audio>
+        </div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
