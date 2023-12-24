@@ -156,13 +156,14 @@
             </div>
 
         </div>
-        <div id="home-mediaPlayer">
+        
+    </main>
+    <div id="home-mediaPlayer">
                 <audio controls id="home-player">
                     <source src="" type="audio/mp3">
                     Your browser does not support audio.
                 </audio>
-        </div>
-    </main>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
