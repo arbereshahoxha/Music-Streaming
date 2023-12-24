@@ -15,7 +15,7 @@ header img{
     width: 40px;
     padding: 20px;
 }
-.container{
+.artists-container{
     display: flex;
     flex-wrap: wrap;
     margin: 0px;
@@ -24,30 +24,30 @@ header img{
     margin: auto;
     padding: 10px;
 }
-.artist{
+.artists-artist{
     display: flex;
     text-align: center;
     margin: 15px;
 }
-.artist > img{
+.artists-artist > img{
     height: 250px;
     width: 250px;
     margin: 15px;
     border-radius: 10px;
 
 }
-.artist{
+.artists-artist{
     position: relative;
     margin-top: 100px;
     cursor: pointer;
     overflow: hidden;
 }
-.artist > img{
+.artists-artist > img{
     width: 400px;
     height: 400px;
     transition: 0.3s ease;
 }
-.description{
+.artists-description{
     position: absolute;
     top: 0;
     left: 0;
@@ -58,19 +58,19 @@ header img{
     opacity: 0;
     color:  #bfbfbf;
 }
-.description h2{
+.artists-description h2{
     color: #fff;
     font-size: 45px;
     text-align: center;
     margin-top: 50px;
 }
-.artist:hover img{
+.artists-artist:hover img{
     transform: scale(1.5);
 }
-.artist:hover .description{
+.artists-artist:hover .artists-description{
     opacity: 1;
 }
-#info{
+#artists-info{
     background-color: #333333;
     color:#666666;
     width: 100px;

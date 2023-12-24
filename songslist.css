@@ -6,7 +6,7 @@ body{
     width:100%;
     font-family: 'Sora', sans-serif;
 }
-#all{
+#songs-all{
     display: flex;
     flex-wrap: wrap;
     margin: 0px;
@@ -15,7 +15,7 @@ body{
     margin: auto;
     padding: 2px;
 }
-.kanget{
+.songs-kanget{
     /* margin: 10px; */
     border-style: groove;
     border-radius: 8px;
@@ -24,7 +24,7 @@ body{
     height: 220px;
     margin-top: 10px;
 }
-.kanget > img{
+.songs-kanget > img{
     height: 100px;
     width: 100px;
     margin-left: 15px;
@@ -32,12 +32,12 @@ body{
     margin-top: 25px;
     border-radius: 10px;
 }
-.kanget > h2{
+.songs-kanget > h2{
     text-wrap: wrap;
     color: white;
     font-size: 20px;
 } 
-.kanget > p{
+.songs-kanget > p{
     margin: auto;
     color: #4d4d4d;
     font-size: 10px;
@@ -52,9 +52,9 @@ header img{
     width: 40px;
     padding: 20px;
 }
-.kanget:hover{
+.songs-kanget:hover{
     background-color: #262626;
 }
-.kanget:hover img{
+.songs-kanget:hover img{
     transform: scale(1.2);
 }

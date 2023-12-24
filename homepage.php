@@ -11,8 +11,8 @@
         <!-- <p>Headeri</p> -->
     </header>
     <main>
-        <div id="main-content">
-            <div id="nav-bar">
+        <div id="home-main-content">
+            <div id="home-nav-bar">
                 <a href="homepage.html"><h3>Home</h3></a>
                 <a href="songslist.html"><h3>Songs</h3></a>
                 <a href="genres.html"><h3>Genres</h3></a>
@@ -21,133 +21,133 @@
             </div>
 
             <!-- Main page -->
-            <div id="categories">
+            <div id="home-categories">
                 
-                <div class="see-all">
+                <div class="home-see-all">
                     <a href="songslist.html">See all</a>
                 </div>
                 <!-- Songs -->
-                <div id="songs">
-                <div class="kanget" onclick="playSong('songs/ElaiUnMeTy.mp3')">
+                <div id="home-songs">
+                <div class="home-kanget" onclick="playSong('songs/ElaiUnMeTy.mp3')">
                     <img src="Fotot/un-me-ty.png">
                     <h2>Un Me Ty</h2>
                     <p>Elai</p>
                 </div>
-                <div class="kanget" onclick="playSong('songs/ElaiJoti.mp3')">
+                <div class="home-kanget" onclick="playSong('songs/ElaiJoti.mp3')">
                     <img src="Fotot/Joti.png">
                     <h2>Joti</h2>
                     <p>Elai</p>
                 </div>
-                <div class="kanget" onclick="playSong('songs/YllLimaniDafinaZeqiriKaje.mp3')">
+                <div class="home-kanget" onclick="playSong('songs/YllLimaniDafinaZeqiriKaje.mp3')">
                     <img src="Fotot/kaje.png">
                     <h2>Kaje</h2>
                     <p>Yll Limani, Dafina Zeqiri</p>
                 </div>
-                <div class="kanget" onclick="playSong('songs/YllLimaniPerKonJeZbukuru.mp3')">
+                <div class="home-kanget" onclick="playSong('songs/YllLimaniPerKonJeZbukuru.mp3')">
                     <img src="Fotot/per-kon-je-zbukuru.jpg">
                     <h2>Per kon je zbukuru</h2>
                     <p>Yll Limani</p>
                 </div>
-                <div class="kanget" onclick="playSong('songs/YllLimaniMeJetu.mp3')">
+                <div class="home-kanget" onclick="playSong('songs/YllLimaniMeJetu.mp3')">
                     <img src="Fotot/me-jetu.jpg">
                     <h2>Me Jetu</h2>
                     <p>Yll Limani</p>
                 </div>
-                <div class="kanget" onclick="playSong('songs/DhurataDoraElvanaGjataGajde.mp3')">
+                <div class="home-kanget" onclick="playSong('songs/DhurataDoraElvanaGjataGajde.mp3')">
                     <img src="Fotot/Gajde.png">
                     <h2>Gajde</h2>
                     <p>Dhurata Dora,Elvana Gjata</p>
                 </div>
                 </div>
 
-                <div class="see-all">
+                <div class="home-see-all">
                     <a href="genres.html">See all</a>
                 </div>
 
                 <!-- Genres -->
-                <div id="genres">
-                        <div class="genre-box" id="Trending">
+                <div id="home-genres">
+                        <div class="home-genre-box" id="home-Trending">
                         <a href="songslist.html">
-                            <div class="genre">
+                            <div class="home-genre">
                                 <p>Trending</p>
                             </div>
                         </a>
                         </div>
             
-                        <div class="genre-box" id="For-You">
+                        <div class="home-genre-box" id="home-For-You">
                         <a href="songslist.html">
-                            <div class="genre">
+                            <div class="home-genre">
                                 <p>For You</p>
                             </div>
                         </a>
                         </div>
             
-                        <div class="genre-box" id="Pop">
+                        <div class="home-genre-box" id="home-Pop">
                         <a href="songslist.html">
-                            <div class="genre">
+                            <div class="home-genre">
                                 <p>Pop</p>
                             </div>
                         </a>
                         </div>
                         
-                        <div class="genre-box" id="Hip-Hop">
+                        <div class="home-genre-box" id="home-Hip-Hop">
                         <a href="songslist.html">
-                            <div class="genre">
+                            <div class="home-genre">
                                 <p>Hip-Hop</p>
                             </div>
                         </a>
                         </div>
             
-                        <div class="genre-box" id="Mood">
+                        <div class="home-genre-box" id="home-Mood">
                         <a href="songslist.html">
-                            <div class="genre">
+                            <div class="home-genre">
                                 <p>Mood</p>
                             </div>
                         </a>
                         </div>
                 </div>
 
-                <div class="see-all">
+                <div class="home-see-all">
                     <a href="popular-artist.html">See all</a>
                 </div>
 
                 <!-- Artists -->
-                <div id="artists">
-                    <div class="artist">
-                        <img src="Artists/Eminem.jpg" class="images">
-                        <div class="description">
+                <div id="home-artists">
+                    <div class="home-artist">
+                        <img src="Artists/Eminem.jpg">
+                        <div class="home-description">
                             <h2>Eminem</h2>
-                            <a href="https://www.biography.com/musicians/eminem"><input type="button" value="Read More" id="info"></a>
+                            <a href="https://www.biography.com/musicians/eminem"><input type="button" value="Read More" id="home-info"></a>
                         </div>
                     </div>
-                    <div class="artist">
+                    <div class="home-artist">
                         <img src="Artists/akon.jpg">
-                        <div class="description">
+                        <div class="home-description">
                             <h2>Akon</h2>
                            <a href="https://www.biography.com/musicians/akon">
-                                <input type="button" value="Read More" id="info">
+                                <input type="button" value="Read More" id="home-info">
                             </a>
                         </div>
                     </div>
-                    <div class="artist">
+                    <div class="home-artist">
                         <img src="Artists/elai.jpg">
-                        <div class="description">
+                        <div class="home-description">
                             <h2>Elai</h2>
-                            <a href="https://en.wikipedia.org/wiki/Elai_(rapper)"><input type="button" value="Read More" id="info"></a>
+                            <a href="https://en.wikipedia.org/wiki/Elai_(rapper)"><input type="button" value="Read More" id="home-info"></a>
                         </div>
                     </div>
-                    <div class="artist">
+                    <div class="home-artist">
                         <img src="Artists/dua-lipa.jpg">
-                        <div class="description">
+                        <div class="home-description">
                             <h2>Dua</h2>
-                            <a href="https://www.britannica.com/biography/Dua-Lipa"><input type="button" value="Read More" id="info"></a>
+                            <a href="https://www.britannica.com/biography/Dua-Lipa"><input type="button" value="Read More" id="home-info"></a>
                         </div>
                     </div>
-                    <div class="artist">
+                    <div class="home-artist">
                         <img src="Artists/yll-limani.jpg">
-                        <div class="description">
+                        <div class="home-description">
                             <h2>Yll</h2>
-                            <a href="https://en.wikipedia.org/wiki/Yll_Limani"><input type="button" value="Read More" id="info"></a>
+                            <a href="https://en.wikipedia.org/wiki/Yll_Limani"><input type="button" value="Read More" id="home-info"></a>
                         </div>
                     </div>
 
@@ -156,8 +156,8 @@
             </div>
 
         </div>
-        <div id="mediaPlayer">
-                <audio controls id="player">
+        <div id="home-mediaPlayer">
+                <audio controls id="home-player">
                     <source src="" type="audio/mp3">
                     Your browser does not support audio.
                 </audio>

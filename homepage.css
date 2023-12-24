@@ -14,25 +14,36 @@ body{
 main{
     height: 100%;
 }
-#main-content{
+
+header{
+    height: 75px;
+    background-color: black;
+}
+header img{
+    height: 40px;
+    width: 40px;
+    padding: 20px;
+}
+
+#home-main-content{
     display: flex;
     height: 100%;
     overflow-y: hidden;
 }
-#nav-bar{
+#home-nav-bar{
     padding: 40px;
     background-color: black;
     color: white;
     width: 250px
 }
-#nav-bar > a{
+#home-nav-bar > a{
     text-decoration: none;
     color: rgb(97, 87, 87);
 }
-#nav-bar > a:hover{
+#home-nav-bar > a:hover{
     color: white;
 }
-#categories{
+#home-categories{
     background-color: #1a1a1a;
     color: black;
     width: 100%;
@@ -41,7 +52,7 @@ main{
     
 }
 /* Songs */
-#songs{
+#home-songs{
     display: flex;
     flex-wrap: wrap;
     margin: 10px;
@@ -49,7 +60,7 @@ main{
     justify-content: center;
     text-align: center;
 }
-.see-all > a{
+.home-see-all > a{
     /* padding: 20px; */
     text-decoration: none;
     color: white;
@@ -62,7 +73,7 @@ main{
 	align-content: stretch;
     margin: 10px;
 }
-.kanget{
+.home-kanget{
     /* margin: 10px; */
     border-style: groove;
     border-radius: 8px;
@@ -71,7 +82,7 @@ main{
     height: 220px;
     margin-top: 10px;
 }
-.kanget > img{
+.home-kanget > img{
     height: 100px;
     width: 100px;
     margin-left: 15px;
@@ -79,34 +90,26 @@ main{
     margin-top: 25px;
     border-radius: 10px;
 }
-.kanget > h2{
+.home-kanget > h2{
     text-wrap: wrap;
     color: white;
     font-size: 20px;
 } 
-.kanget > p{
+.home-kanget > p{
     margin: auto;
     color: #4d4d4d;
     font-size: 10px;
     margin-top: -10px;
 }
-header{
-    height: 75px;
-    background-color: black;
-}
-header img{
-    height: 40px;
-    width: 40px;
-    padding: 20px;
-}
-.kanget:hover{
+
+.home-kanget:hover{
     background-color: #262626;
 }
-.kanget:hover img{
+.home-kanget:hover img{
     transform: scale(1.2);
 }
 /* Genres */
-#genres {
+#home-genres {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -117,14 +120,14 @@ header img{
     padding: 10px;
 }
 
-.genre-box > a {
+.home-genre-box > a {
     text-decoration: none;
     color: white;
     width: 200px;
     height: 200px;
     padding: 0;
 }
-.genre-box{
+.home-genre-box{
     display: flex;
     flex-direction: column;
     border-radius: 10px;
@@ -132,7 +135,7 @@ header img{
     height: 150px;
     margin-right: 20px;
 }
-.genre p {
+.home-genre p {
     padding-left: 7%;
     padding-top: 2%;
     font-size: 25px;
@@ -140,24 +143,24 @@ header img{
     margin: 10px 0 0 0;
 }
 
-#Trending {
+#home-Trending {
     background-color: rgb(253, 4, 25);
 }
-#For-You {
+#home-For-You {
     background-color: rgb(22, 194, 6);
 }
-#Pop {
+#home-Pop {
     background-color: rgb(4, 162, 253);
 }
-#Hip-Hop {
+#home-Hip-Hop {
     background-color: rgb(255, 102, 0)
 }
-#Mood {
+#home-Mood {
     background-color: rgb(52, 9, 102);
 }
 
 /* Artists */
-#artists{
+#home-artists{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -165,7 +168,7 @@ header img{
     margin: 25px;
     padding: 10px;
 }
-.artist{
+.home-artist{
     display: flex;
     text-align: center;
     /* margin: 10px; */
@@ -182,14 +185,14 @@ header img{
 
 } */
 
-.artist > img{
+.home-artist > img{
     width: 150px;
     height: 150px;
     transition: 0.3s ease;
     margin: 15px;
     border-radius: 10px;
 }
-.description{
+.home-description{
     position: absolute;
     top: 0;
     left: 0;
@@ -200,19 +203,19 @@ header img{
     opacity: 0;
     color:  #bfbfbf;
 }
-.description h2{
+.home-description h2{
     color: #fff;
     font-size: 45px;
     text-align: center;
     margin-top: 50px;
 }
-.artist:hover img{
+.home-artist:hover img{
     transform: scale(1.5);
 }
-.artist:hover .description{
+.home-artist:hover .home-description{
     opacity: 1;
 }
-#info{
+#home-info{
     background-color: #333333;
     color:#666666;
     width: 100px;
@@ -221,7 +224,7 @@ header img{
     border-radius: 5px;
 }
 
-#mediaPlayer {
+#home-mediaPlayer {
     background-color: #6c007a;
     display: flex;
     flex-direction: column;

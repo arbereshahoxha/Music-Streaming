@@ -12,7 +12,7 @@ h1 {
 }
 
 
-.container {
+.genres-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -33,7 +33,7 @@ a {
     margin: 15px;
 }
 
-.genre {
+.genres-genre {
     display: flex;
     flex-direction: column;
     background-color: #837f83;
@@ -42,7 +42,7 @@ a {
     border-radius: 10px;
 }
 
-.genre p {
+.genres-genre p {
     padding-left: 7%;
     padding-top: 2%;
     font-size: 25px;
@@ -50,25 +50,25 @@ a {
     margin: 20px 0 0 0;
 }
 
-#Trending {
+#genres-Trending {
     background-color: rgb(253, 4, 25);
 }
-#For-You {
+#genres-For-You {
     background-color: rgb(22, 194, 6);
 }
-#Pop {
+#genres-Pop {
     background-color: rgb(4, 162, 253);
 }
-#Hip-Hop {
+#genres-Hip-Hop {
     background-color: rgb(255, 102, 0)
 }
-#Mood {
+#genres-Mood {
     background-color: rgb(52, 9, 102);
 }
-#Party {
+#genres-Party {
     background-color: rgb(255, 105, 175)
 }
-#Electronic {
+#genres-Electronic {
     background-color: magenta;
 }
 

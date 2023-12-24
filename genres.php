@@ -11,45 +11,45 @@
     </head>
     <body>
         <h1>Popular Genres</h1>
-        <div class="container">
+        <div class="genres-container">
             <a href="songslist.html">
-                <div class="genre" id="Trending">
+                <div class="genres-genre" id="genres-Trending">
                     <p>Trending</p>
                 </div>
             </a>
             
             <a href="songslist.html">
-                <div class="genre" id="For-You">
+                <div class="genres-genre" id="genres-For-You">
                     <p>For You</p>
                 </div>
             </a>
             
             <a href="songslist.html">
-                <div class="genre" id="Pop">
+                <div class="genres-genre" id="genres-Pop">
                     <p>Pop</p>
                 </div>
             </a>
             
             <a href="songslist.html">
-                <div class="genre" id="Hip-Hop">
+                <div class="genres-genre" id="genres-Hip-Hop">
                     <p>Hip-Hop</p>
                 </div>
             </a>
             
             <a href="songslist.html">
-                <div class="genre" id="Mood">
+                <div class="genres-genre" id="genres-Mood">
                     <p>Mood</p>
                 </div>
             </a>
             
             <a href="songslist.html">
-                <div class="genre" id="Party">
+                <div class="genres-genre" id="genres-Party">
                     <p>Party</p>
                 </div>
             </a>
             
             <a href="songslist.html">
-                <div class="genre" id="Electronic">
+                <div class="genres-genre" id="genres-Electronic">
                     <p>Electronic</p>
                 </div>
             </a>
