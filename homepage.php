@@ -13,9 +13,9 @@
     <main>
         <div id="home-main-content">
             <div id="home-nav-bar">
-                <a href="homepage.html"><h3>Home</h3></a>
-                <a href="songslist.html"><h3>Songs</h3></a>
-                <a href="genres.html"><h3>Genres</h3></a>
+                <a href="homepage.php"><h3>Home</h3></a>
+                <a href="songslist.php"><h3>Songs</h3></a>
+                <a href="genres.php"><h3>Genres</h3></a>
                 <h3>About Us</h3>
 
             </div>
