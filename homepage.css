@@ -226,12 +226,184 @@ header img{
     border-radius: 5px;
 }
 
+/*MEDIAPLAYER STYLING*/
 #home-mediaPlayer {
-    background-color: #6c007a;
+    width: 100%;
+    height: 10%;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#home-songInformation {
+    width: 25%;
+    height: 100%;
+}
+
+#home-centerPlayer {
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 10%;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+#home-playButtons {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+}
+#home-lowerPlayer {
+    width: 100%;
+    height: 40%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#home-volumeControls {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.home-playerButton {
+    padding: 0;
+    border: 0;
+    margin: 10px;
+    background-color: rgb(44, 0, 40);
+    border-radius: 40%;
+    cursor: pointer;
+    outline: none;
+    width: 50px;
+    height: 50px
+}
+
+/*Buttons*/
+#home-previous-icon {
+    padding: 0;
+    padding-right: 2px;
+    height: 28px;
+}
+#home-play-icon {
+    padding: 0;
+    padding-top: 1px;
+    padding-left: 2px;
+    height: 20px;
+}
+#home-next-icon {
+    padding: 0;
+    padding-top: 1px;
+    padding-left: 2px;
+    height: 28px;
+}
+#home-mute-icon {
+    padding: 0;
+    padding-top: 1px;
+    padding-right: 1px;
+    height: 20px;
+}
+
+
+/*  
+    Firefox dhe WebKit browsers kane struktura te ndryshme
+    per stilizimin e sliders (range input).
+    Per me stilizu progresin e sliders ne HTML, duhet t'i qasemi te 2 llojet e ndryshme
+    Firefox ofron pseudo-elementet ::-moz-range-track
+                                   ::-moz-range-thumb
+    WebKit ofron psuedo-elementin ::-webkit-slider-runnable-track
+                                  ::-webkit-slider-thumb
+
+    Kodi i CSS eshte i bazuar ne 
+    https://css-tricks.com/lets-create-a-custom-audio-player/
+    https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/
+*/
+
+/*Ky bllok i ben stilizim default te browsers override*/
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/*Stilizimi i track*/
+
+/*Chrome, Safari, Opera, Edge Chromium*/
+input[type="range"]::-webkit-slider-runnable-track {
+    background: #ffffff;
+    height: 6px;
+    border-radius: 5px;
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-track {
+    background: #ffffff;
+    height: 6px;
+    border-radius: 5px;
+}
+
+input[type="range"].home-longSlider {
+    width: 40%;
+}
+
+input[type="range"].home-shortSlider {
+    width: 40%;
+}
+
+
+/*Stilizimi i thumb*/
+/*
+    margin-top = (track height in pixels/2)-(thumb height in pixels/2)
+    margin-top = 6/2 - 12/2 = -3px
+*/
+
+/*Chrome, Safari, Opera, Edge Chromium*/
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default */
+    margin-top: -3px; /*Centers the thumb on the track */
+    appearance: none;
+    background-color: #fff;
+    height: 12px;
+    width: 12px;
+    border-radius: 8px;
+    border: solid 0.5px rgb(231, 231, 231);
+}
+
+/*Firefox*/
+input[type="range"]::-moz-range-thumb {
+    border: solid 0.5px rgb(231,231,231);
+    border-radius: 8px;
+    background-color: #fff;
+    height: 12px;
+    width: 12px;
+}
+
+
+/* FOCUS STYLES */
+input[type="range"]:focus {
+    outline: none; /*remove default*/
 }
 
