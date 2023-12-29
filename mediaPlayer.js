@@ -23,12 +23,12 @@ let muteState = "unmuted";
 
 let songPointer = 0;
 let songs = [
-            "songs/DhurataDoraElvanaGjataGajde.mp3",
-            "songs/ElaiJoti.mp3",
             "songs/ElaiUnMeTy.mp3",
+            "songs/ElaiJoti.mp3",
             "songs/YllLimaniDafinaZeqiriKaje.mp3",
+            "songs/YllLimaniPerKonJeZbukuru.mp3",
             "songs/YllLimaniMeJetu.mp3",
-            "songs/YllLimaniPerKonJeZbukuru.mp3"
+            "songs/DhurataDoraElvanaGjataGajde.mp3",
             ];
 audio.src = songs[0];
 
@@ -88,6 +88,22 @@ const displayDuration = () => {
 //The maximum value of the slider is the length of the song
 const setSliderMax = () => {
     seekSlider.max = Math.floor(audio.duration);
+}
+
+function playSong(song) {
+    for(let i = 0; i < songs.length; i++) {
+        if (song == songs[i]) {
+            songPointer = i;
+            audio.src = songs[i];
+            loadSong();
+            audio.play()
+            playState="pause";
+            playIconContainer.src = "icons/pause-button-white.png";
+            return;
+        } else {
+
+        }
+    }
 }
 
 //If the song is loaded, it displays the duration
@@ -169,3 +185,4 @@ volumeSlider.addEventListener('input', (e) => {
     outputContainer.textContent = value;
     audio.volume = value/100;
 });
+

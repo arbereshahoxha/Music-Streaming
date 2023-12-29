@@ -31,11 +31,4 @@ function validateForm() {
 
     return isValid;
 }
-//audio player
-function playSong(song) {
-    let player = document.getElementById("home-player");
-    player.src = song;
-    player.type = 'audio/mp3'
-    player.load();
-    player.play();
-}
+

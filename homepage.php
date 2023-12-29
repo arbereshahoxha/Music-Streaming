@@ -165,9 +165,9 @@
             </div>
             <div id="home-centerPlayer">
                 <div id="home-playButtons">
-                    <button class="home-playerButton" id="home-previous-button"><img src="img/previus-button.png" alt="previous" id="home-previous-icon"></button>
-                    <button class="home-playerButton" id="home-play-button"><img src="img/play-button-white.png" alt="play/pause" id="home-play-icon"></button>
-                    <button class="home-playerButton" id="home-next-button"><img src="img/next-button.png" alt="next" id="home-next-icon"></button>
+                    <button class="home-playerButton" id="home-previous-button"><img src="icons/previus-button.png" alt="previous" id="home-previous-icon"></button>
+                    <button class="home-playerButton" id="home-play-button"><img src="icons/play-button-white.png" alt="play/pause" id="home-play-icon"></button>
+                    <button class="home-playerButton" id="home-next-button"><img src="icons/next-button.png" alt="next" id="home-next-icon"></button>
                 </div>
                 <div id="home-lowerPlayer">
                     <span id="home-current-time" class="home-time">0:00</span>
@@ -178,7 +178,7 @@
             
             <div id="home-volumeControls">
                 <output id="home-volume-output">100</output>
-                <button class="home-playerButton" id="home-mute-button"><img src="img/volume-button.png" alt="play/pause" id="home-mute-icon"></button>
+                <button class="home-playerButton" id="home-mute-button"><img src="icons/volume-button.png" alt="play/pause" id="home-mute-icon"></button>
                 <input type="range" class="home-shortSlider" id="home-volume-slider" max="100" value="100">
             </div>
     </div>
