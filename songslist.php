@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Songs</title>
-    <link rel="stylesheet" href="songslist.css">
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;700;800&family=Varela+Round&display=swap" rel="stylesheet">
 
-</head>
-<body>
-    <header>
-        <div>
-        <a href="homepage.html"><img src="Fotot/home-header.jpg"></a>
-        </div>
-    </header>
-    <main>
     <div id="songs-all">
         <div class="songs-kanget">
             <img src="Fotot/Gajde.png">
@@ -192,6 +176,3 @@
             <p>Teuta Selimi</p>
         </div>
     </div>
-</main>
-</body>
-</html>

@@ -1,6 +1,7 @@
 body,html{
     height: 100%;
     width: 100%;
+    max-height: 100%;
     margin:0;
     /* padding:0; */
     overflow: hidden;
@@ -9,12 +10,8 @@ body,html{
 
 body{
     overflow-x: hidden;
-    overflow-y: scroll;
     display: flex;
     flex-direction: column;
-}
-main{
-    height: 100%;
 }
 
 header{
@@ -51,6 +48,7 @@ header img{
     width: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
+    max-height: 100%;
     
 }
 /* Songs */
@@ -233,7 +231,7 @@ header img{
     height: 10%;
     padding: 0;
     margin: 0;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(0,0,0);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
