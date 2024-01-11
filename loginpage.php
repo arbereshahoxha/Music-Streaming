@@ -1,3 +1,37 @@
+<?php
+if(isset($_POST["LogInButton"])){
+    if(empty($_POST["username"]) || empty($_POST["password"])){
+        echo "Please fill in all the fields";
+    }else{
+        $email= $_POST["email"];
+        $password = $_POST["password"];
+
+        include"users.php";
+        $i= 0;
+        foreach($users as $user){
+            if($user["email"] == $email && $user["password"] == $password){
+                session_start();
+
+                $_SESSION["email"] = $user["email"];
+                $_SESSION["password"] = $password;
+                $_SESSION["role"] = $user["role"];
+                $_SESSION["loginTime"] = date("h:i:s");
+                header("location:homepage.php");
+                exit();
+            }else{
+                $i++;
+                if($i == sizeof($users)) {
+                    echo "Incorrect email or password";
+                    exit();
+                }
+            }
+        }
+    }
+}
+
+
+?>
+
 <html lang="en">
     <head>
         <title>Login page</title>
@@ -34,7 +68,7 @@
                     <div class="loginForm">
                         <input type="text" id="email" placeholder="Email">
                         <input type="password" id="password" placeholder="Password">
-                        <a href="homepage.html"><button>Log In</button></a>
+                        <a href="homepage.html"><button name="LogInButton" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">Log In</button></a>
                     </div>
                 </div>
                 

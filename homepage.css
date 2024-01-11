@@ -35,12 +35,13 @@ header img{
     color: white;
     width: 250px
 }
-#home-nav-bar > a{
-    text-decoration: none;
-    color: rgb(97, 87, 87);
-}
-#home-nav-bar > a:hover{
-    color: white;
+#myForm{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    align-content: stretch;
 }
 #home-categories{
     background-color: #1a1a1a;

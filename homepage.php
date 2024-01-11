@@ -1,3 +1,15 @@
+<?php
+  session_start();
+  $hide="";
+  if(!isset($_SESSION['email']))
+    header("location:loginpage.php");
+  else{
+    if($_SESSION['role'] == "admin")
+      $hide = "";
+    else
+      $hide = "hide";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,3 +83,7 @@
     <script src="mediaPlayer.js"></script>
 </body>
 </html>
+
+<?php
+  }
+?>
