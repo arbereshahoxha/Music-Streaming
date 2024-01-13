@@ -41,16 +41,20 @@
 </head>
 <body>
     <header>
-        asd<!-- <p>Headeri</p> -->
+        <p>RATATUNES</p>
+        <button id="logOutButton" name="logOutButton" onclick="loadContent('logout.php')">Log Out</button>
     </header>
     <div id="home-main-content">
         <div id="home-nav-bar">
-                <form method="post" id="myForm">
-                    <input type="button" name="home" value="Home" onclick="loadContent('default.php')">
-                    <input type="button" name="songs" value="Songs" onclick="loadContent('songslist.php')">
-                    <input type="button" name="genres" value="Genres" onclick="loadContent('genres.php')">
-                    <input type="button" name="aboutus" value="About Us"> 
-                </form>
+            <form method="post" id="myForm">
+                <label id="home" onclick="loadContent('default.php')">Home</label>
+                <label id="songs" onclick="loadContent('songslist.php')">Songs</label>
+                <label id="genres" onclick="loadContent('genres.php')">Genres</label>
+                <label id="aboutus" onclick="loadContent('blog.php')">Blogs</label>
+                <label id="aboutus">About Us</label>
+                <label id="dashboard" onclick="loadcontent('dashboard.php')" class="<?php echo $hide?>">Dashboard</label>
+                
+            </form>
         </div>
         <!-- Main page -->
         <div id="home-categories">

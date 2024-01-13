@@ -94,3 +94,24 @@ OLD HOMEPAGE
 .mediaBar {
     height: 10%;
 }
+
+
+
+--------Validimi i loginit-----------
+<?php
+  session_start();
+  $hide="";
+  if(!isset($_SESSION['email']))
+    header("location:loginpage.php");
+  else{
+    if($_SESSION['role'] == "admin")
+      $hide = "";
+    else
+      $hide = "hide";
+?>
+
+
+
+<?php
+  }
+?>

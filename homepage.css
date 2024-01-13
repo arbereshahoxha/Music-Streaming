@@ -7,21 +7,29 @@ body,html{
     overflow: hidden;
     font-family: 'Sora', sans-serif;
 }
-
 body{
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
 }
-
 header{
-    height: 75px;
+    height: 120px;
     background-color: black;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-left: 20px;
 }
-header img{
-    height: 40px;
-    width: 40px;
-    padding: 20px;
+header > p{
+    color: pink;
+    font-weight: bolder;
+}
+header > button{
+    border: none;
+    border-radius: 15px;
+    background-color: #666666;
+    height: 25px;
+    width: 65px;
 }
 
 #home-main-content{
@@ -32,9 +40,8 @@ header img{
 #home-nav-bar{
     padding: 40px;
     background-color: black;
-    color: white;
     width: 250px
-}
+} 
 #myForm{
     display: flex;
     flex-direction: column;
@@ -42,6 +49,13 @@ header img{
     justify-content: space-between;
     align-items: baseline;
     align-content: stretch;
+    color: #807c7cde;
+}
+#myForm label{
+    padding: 5px;
+    margin-top: 10px;
+    font-size: large;
+    font-weight: bolder;
 }
 #home-categories{
     background-color: #1a1a1a;
@@ -50,29 +64,18 @@ header img{
     overflow-x: hidden;
     overflow-y: scroll;
     max-height: 100%;
-    
+    padding: 10px;
+    justify-content: space-between;
 }
 /* Songs */
 #home-songs{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    margin: 10px;
-    padding: 10px;
     justify-content: center;
     text-align: center;
-}
-.home-see-all > a{
-    /* padding: 20px; */
-    text-decoration: none;
-    color: white;
-    font-size: 15px;
-    display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-    justify-content: flex-end;
-	align-items: flex-start;
-	align-content: stretch;
-    margin: 10px;
+    margin: 20px;
+    padding: 10px;
 }
 .home-kanget{
     /* margin: 10px; */
@@ -81,7 +84,6 @@ header img{
     border: none;
     width: 150px;
     height: 220px;
-    margin-top: 10px;
 }
 .home-kanget > img{
     height: 100px;
@@ -120,7 +122,6 @@ header img{
     margin: 20px;
     padding: 10px;
 }
-
 .home-genre-box > a {
     text-decoration: none;
     color: white;
@@ -163,6 +164,7 @@ header img{
 /* Artists */
 #home-artists{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
@@ -185,7 +187,6 @@ header img{
     border-radius: 10px;
 
 } */
-
 .home-artist > img{
     width: 150px;
     height: 150px;

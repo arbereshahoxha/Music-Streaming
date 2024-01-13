@@ -1,18 +1,15 @@
-<div class="home-see-all">
-    <a href="songslist.html">See all</a>
-</div>
 
 <!-- Songs -->
 <div id="home-songs">
     <div class="home-kanget" onclick="playSong('songs/ElaiUnMeTy.mp3')">
-                    <img src="Fotot/un-me-ty.png">
-                    <h2>Un Me Ty</h2>
-                    <p>Elai</p>
+        <img src="Fotot/un-me-ty.png">
+        <h2>Un Me Ty</h2>
+        <p>Elai</p>
     </div>
     <div class="home-kanget" onclick="playSong('songs/ElaiJoti.mp3')">
-                    <img src="Fotot/Joti.png">
-                    <h2>Joti</h2>
-                    <p>Elai</p>
+        <img src="Fotot/Joti.png">
+        <h2>Joti</h2>
+        <p>Elai</p>
     </div>
     <div class="home-kanget" onclick="playSong('songs/YllLimaniDafinaZeqiriKaje.mp3')">
         <img src="Fotot/kaje.png">
@@ -35,15 +32,14 @@
         <p>Dhurata Dora,Elvana Gjata</p>
     </div>
 </div>
-
-<div class="home-see-all">
-                    <a href="genres.html">See all</a>
-</div>
+<!-- <div class="home-see-all">
+    <a href="songslist.php">See all</a>
+</div> -->
 
 <!-- Genres -->
 <div id="home-genres">
     <div class="home-genre-box" id="home-Trending">
-        <a href="songslist.html">
+        <a onclick="loadContent('genres.php')">
             <div class="home-genre">
                 <p>Trending</p>
             </div>
@@ -51,7 +47,7 @@
     </div>
             
 <div class="home-genre-box" id="home-For-You">
-    <a href="songslist.html">
+    <a onclick="loadContent('genres.php')">
         <div class="home-genre">
             <p>For You</p>
         </div>
@@ -59,7 +55,7 @@
 </div>
             
 <div class="home-genre-box" id="home-Pop">
-    <a href="songslist.html">
+    <a onclick="loadContent('genres.php')">
         <div class="home-genre">
             <p>Pop</p>
         </div>
@@ -67,7 +63,7 @@
 </div>
                         
 <div class="home-genre-box" id="home-Hip-Hop">
-    <a href="songslist.html">
+    <a onclick="loadContent('genres.php')">
         <div class="home-genre">
             <p>Hip-Hop</p>
         </div>
@@ -75,17 +71,17 @@
 </div>
             
 <div class="home-genre-box" id="home-Mood">
-    <a href="songslist.html">
+    <a onclick="loadContent('genres.php')">
         <div class="home-genre">
             <p>Mood</p>
         </div>
 </a>
 </div>
 <div>
+<!-- <div class="home-see-all">
+    <a href="genres.php">See all</a>
+</div> -->
 
-<div class="home-see-all">
-    <a href="popular-artist.html">See all</a>
-</div>
 
 <!-- Artists -->
 <div id="home-artists">
@@ -129,3 +125,7 @@
         </div>
     </div>
 </div>
+
+<!-- <div class="home-see-all">
+    <a href="popular-artist.php">See all</a>
+</div> -->

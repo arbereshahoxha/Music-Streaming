@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST["LogInButton"])){
-    if(empty($_POST["username"]) || empty($_POST["password"])){
-        echo "Please fill in all the fields";
+    if(empty($_POST["email"]) || empty($_POST["password"])){
+        echo ('Please fill in all the fields');
     }else{
         $email= $_POST["email"];
         $password = $_POST["password"];
@@ -66,9 +66,11 @@ if(isset($_POST["LogInButton"])){
                     </div>
 
                     <div class="loginForm">
-                        <input type="text" id="email" placeholder="Email">
-                        <input type="password" id="password" placeholder="Password">
-                        <a href="homepage.html"><button name="LogInButton" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">Log In</button></a>
+                        <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
+                        <input type="text" name="email" placeholder="Email">
+                        <input type="password" name="password" placeholder="Password">
+                        <a href="homepage.html"><button name="LogInButton">Log In</button></a>
+                        </form>
                     </div>
                 </div>
                 
