@@ -40,7 +40,7 @@
                         <hr>
                     </div>
 
-                    <form class="signUpForm" onsubmit="return validateForm()">
+                    <form class="signUpForm" onsubmit="return validateForm()" action="loginpage.php">
                         <input type="text" id="name" placeholder="Your First & Last Name" required>
                         <select required>
                             <option value="" disabled selected>Your Gender</option>
