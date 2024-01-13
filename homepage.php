@@ -34,7 +34,7 @@
             }
             });
         }
-
+        
         //default
         loadContent('default.php');
     </script>
@@ -42,7 +42,7 @@
 <body>
     <header>
         <p>RATATUNES</p>
-        <button id="logOutButton" name="logOutButton" onclick="loadContent('logout.php')">Log Out</button>
+        <button id="logOutButton" name="logOutButton" onclick="window.location.href='logout.php'">Log Out</button>
     </header>
     <div id="home-main-content">
         <div id="home-nav-bar">

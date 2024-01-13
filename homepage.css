@@ -24,14 +24,16 @@ header > p{
     color: pink;
     font-weight: bolder;
 }
-header > button{
+#logOutButton{
     border: none;
     border-radius: 15px;
     background-color: #666666;
     height: 25px;
     width: 65px;
 }
-
+.hide{
+    display:none;
+}
 #home-main-content{
     display: flex;
     height: 100%;
