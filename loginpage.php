@@ -80,7 +80,7 @@ if(isset($_POST["LogInButton"])){
                 <div class="signUpMain">
                     <h1>New Here?</h1>
                     <p>Quickly set up your new account.</p>
-                    <a href="signuppage.html"><button>Sign Up</button></a>
+                    <a href="signuppage.php"><button>Sign Up</button></a>
                 </div>
             </div>
         </div>
