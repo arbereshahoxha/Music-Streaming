@@ -1,4 +1,6 @@
 <?php
+include("db.php");
+
 $user1 =[
     "name" => "Admin",
     "lastname" =>"Admini",
@@ -7,26 +9,54 @@ $user1 =[
     "password" => "admin123",
     "role" => "admin"
 ];
+$users = [$user1];
 
-$user2 =[
-    "name" => "Serena",
-    "lastname" =>"Rodriguez",
-    "email" => "srodriguez@gmail.com",
-    "username" => "rodriguez123",
-    "password" => "serena123",
-    "role" => "user"
-];
-
-$user3 =[
-    "name" => "Liam",
-    "lastname" =>"Patel",
-    "email" => "lpatel@gmail.com",
-    "username" => "liampatel123",
-    "password" => "patel123",
-    "role" => "user"
-];
-
-$users = [$user1,$user2,$user3];
-
+class User{
+    private $emriMbiemri;
+    private $gender;
+    private $email;
+    private $password;
+    private $role;
+    public function __construct($emriMbiemri,$gender,$email,$password,$role){
+        $this->emriMbiemri = $emriMbiemri;
+        $this->gender = $gender;
+        $this->email = $email;
+        $this->password = $password;
+        $this->role = $role;
+    }
+    public function getEmriMbiemri(){
+        return $this->emriMbiemri;
+    }
+    public function setEmriMbiemri($emriMbiemri){
+        $this->emriMbiemri = $emriMbiemri;
+    }
+    public function getGender(){
+        return $this->gender;
+    }
+    public function setGender($gender){
+        $this->gender = $gender;
+    }
+    public function getEmail(){
+        return $this->email;
+    }
+    public function setEmail($email){
+        $this->email = $email;
+    }
+    public function getPassword(){
+        return $this->gender;
+    }
+    public function setPassword($password){
+        $this->password = $password;
+    }
+    public function getRole(){
+        return $this->role;
+    }
+    public function setRole($role){
+        $this->role = $role;
+    }
+    public function __toString(){
+        return "Roli : ". $this->role ."  Emri dhe mbiemri : " . $this->emriMbiemri . "  Gjinia : " . $this->gender . "  Emaili : " . $this->email;
+    }
+}
 
 ?>

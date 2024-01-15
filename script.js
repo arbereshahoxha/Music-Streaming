@@ -25,10 +25,9 @@ function validateForm() {
         alert("Passwords do not match");
         isValid = false;
     }
-    if (isValid && !alert('Signup successful!')) {
+    if (isValid) {
         document.getElementById("yourFormId").submit();
     }
-
     return isValid;
 }
 

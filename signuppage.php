@@ -1,3 +1,9 @@
+<?php
+include("db.php");
+
+?>
+
+
 <html>
     <head>
         <title>SignUp Page</title>
@@ -40,17 +46,17 @@
                         <hr>
                     </div>
 
-                    <form class="signUpForm" onsubmit="return validateForm()" action="loginpage.php">
-                        <input type="text" id="name" placeholder="Your First & Last Name" required>
-                        <select required>
+                    <form class="signUpForm" onsubmit="return validateForm()" action="signup.php">
+                        <input type="text" id="name" name="emriMbiemri" placeholder="Your First & Last Name" required>
+                        <select name="gender" required>
                             <option value="" disabled selected>Your Gender</option>
                             <option value="option1">Male</option>
                             <option value="option2">Female</option>
                         </select>
-                        <input type="text" id="email" placeholder="Your Email" required>
-                        <input type="password" id="password" placeholder="Your Password" required>
-                        <input type="password" id="passwordConfirm" placeholder="Confirm Your Password" required>
-                        <button type="submit">Sign Up</button>
+                        <input type="text" id="email" name="email" placeholder="Your Email" required>
+                        <input type="password" id="password" name="password" placeholder="Your Password" required>
+                        <input type="password" id="passwordConfirm" name="cpassword" placeholder="Confirm Your Password" required>
+                        <button type="submit" name="submit">Sign Up</button>
                     </form>
                 </div>
             </div>

@@ -11,7 +11,7 @@ class DatabaseConnection{
             echo "Error connecting to the database";
             return null;
         }else{
-            echo "Succsesful connection to the databasee";
+            echo "";
             return $conn;
         }
     }
