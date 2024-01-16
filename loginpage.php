@@ -1,4 +1,5 @@
 <?php
+include("db.php");
 if(isset($_POST["LogInButton"])){
     if(empty($_POST["email"]) || empty($_POST["password"])){
         echo '<script>alert("Please fill in all the fields");</script>';
@@ -28,7 +29,6 @@ if(isset($_POST["LogInButton"])){
         }
     }
 }
-
 
 ?>
 
@@ -69,7 +69,7 @@ if(isset($_POST["LogInButton"])){
                         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
                         <input type="text" name="email" placeholder="Email">
                         <input type="password" name="password" placeholder="Password">
-                        <a href="homepage.html"><button name="LogInButton">Log In</button></a>
+                        <a href="homepage.php"><button name="LogInButton">Log In</button></a>
                         </form>
                     </div>
                 </div>

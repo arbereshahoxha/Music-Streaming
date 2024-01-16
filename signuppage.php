@@ -1,8 +1,47 @@
 <?php
 include("db.php");
+if(isset($_POST['submit'])){
+    $emriMbiemri = $_POST['emriMbiemri'];
+    $gender = $_POST['gender'];
+    $email= $_POST['email'];
+    $password = $_POST['password'];
+    $role = false;
+
+    //Per me kontrollu a ekziston ne databaze ni user me te njejtin emer mbiemer ose email
+    $sql = "select * from user where emriMbiemri='$emriMbiemri'";
+    $result = mysqli_query($conn, $sql);
+    $count_user = mysqli_num_rows($result);
+
+    $sql = "select * from user where email='$email'";
+    $result = mysqli_query($conn, $sql);
+    $count_email = mysqli_num_rows($result);
+
+    if($count_user == 0 && $count_email == 0){
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+        $sql = "INSERT INTO user(emriMbiemri,gender,email,password,role) values('$emriMbiemri','$gender','$email','$password','$role')";
+        $result = mysqli_query($conn , $sql);
+        if($result){
+            echo 
+            '<script>alert("SignUp succesful")</script>';
+            header("Location: logimpage.php");
+        }
+    }else{
+        if($count_user > 0){
+            echo 
+            '<script>alert("This person already exists")</script>';
+            header("Location: loginpage.php");
+        }
+        if($count_email > 0){
+            echo '<script>alert("This email already exists")</script>';
+            header("Location: loginpage.php");
+        }
+    }
+
+
+}
 
 ?>
-
 
 <html>
     <head>
@@ -19,7 +58,7 @@ include("db.php");
                 <div class="loginMain">
                     <h1>Have an Account?</h1>
                     <p>Log into your account here</p>
-                    <a href="loginpage.html"><button>Log In</button></a>
+                    <a href="loginpage.php"><button>Log In</button></a>
                 </div>
             </div>
 
@@ -46,7 +85,7 @@ include("db.php");
                         <hr>
                     </div>
 
-                    <form class="signUpForm" onsubmit="return validateForm()" action="signup.php">
+                    <form class="signUpForm" onsubmit="return validateForm()" method="post">
                         <input type="text" id="name" name="emriMbiemri" placeholder="Your First & Last Name" required>
                         <select name="gender" required>
                             <option value="" disabled selected>Your Gender</option>
