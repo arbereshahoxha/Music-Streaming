@@ -5,7 +5,7 @@ if(isset($_POST['submit'])){
     $gender = $_POST['gender'];
     $email= $_POST['email'];
     $password = $_POST['password'];
-    $role = false;
+    $role = 0;
 
     //Per me kontrollu a ekziston ne databaze ni user me te njejtin emer mbiemer ose email
     $sql = "select * from user where emriMbiemri='$emriMbiemri'";
@@ -17,22 +17,18 @@ if(isset($_POST['submit'])){
     $count_email = mysqli_num_rows($result);
 
     if($count_user == 0 && $count_email == 0){
-        $sql = "INSERT INTO user(emriMbiemri,gender,email,password,role) values('$emriMbiemri','$gender','$email','$password','$role')";
+        $sql = "INSERT INTO user(emriMbiemri,gender,email,password,role) values('$emriMbiemri','$gender','$email','$password',$role)";
         $result = mysqli_query($conn , $sql);
         if($result){
             echo '<script>alert("SignUp succesful")</script>';
-            //header("Location: loginpage.php");
         }
-    }else{
-        if($count_user > 0){
-            echo '<script>alert("This person already exists")</script>';
-            //header("Location: loginpage.php");
-        }
-        if($count_email > 0){
-            echo '<script>alert("This email already exists")</script>';
-            //header("Location: loginpage.php");
-        }
-    }
+    }elseif($count_user > 0){
+        echo '<script>alert("This person already exists")</script>';
+    }elseif($count_email > 0){
+        echo '<script>alert("This email already exists")</script>';
+    } else{ 
+        echo '<script>alert("There has been a server error")</script>';
+    }  
 
 
 }
