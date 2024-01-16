@@ -17,24 +17,20 @@ if(isset($_POST['submit'])){
     $count_email = mysqli_num_rows($result);
 
     if($count_user == 0 && $count_email == 0){
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
         $sql = "INSERT INTO user(emriMbiemri,gender,email,password,role) values('$emriMbiemri','$gender','$email','$password','$role')";
         $result = mysqli_query($conn , $sql);
         if($result){
-            echo 
-            '<script>alert("SignUp succesful")</script>';
-            header("Location: logimpage.php");
+            echo '<script>alert("SignUp succesful")</script>';
+            //header("Location: loginpage.php");
         }
     }else{
         if($count_user > 0){
-            echo 
-            '<script>alert("This person already exists")</script>';
-            header("Location: loginpage.php");
+            echo '<script>alert("This person already exists")</script>';
+            //header("Location: loginpage.php");
         }
         if($count_email > 0){
             echo '<script>alert("This email already exists")</script>';
-            header("Location: loginpage.php");
+            //header("Location: loginpage.php");
         }
     }
 

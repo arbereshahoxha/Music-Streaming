@@ -9,7 +9,6 @@ $user1 =[
     "password" => "admin123",
     "role" => "admin"
 ];
-$users = [$user1];
 
 class User{
     private $emriMbiemri;
@@ -43,7 +42,7 @@ class User{
         $this->email = $email;
     }
     public function getPassword(){
-        return $this->gender;
+        return $this->password;
     }
     public function setPassword($password){
         $this->password = $password;
@@ -55,7 +54,7 @@ class User{
         $this->role = $role;
     }
     public function __toString(){
-        return "Roli : ". $this->role ."  Emri dhe mbiemri : " . $this->emriMbiemri . "  Gjinia : " . $this->gender . "  Emaili : " . $this->email;
+        return "Roli : ". $this->role ."  Emri dhe mbiemri : " . $this->emriMbiemri . "  Gjinia : " . $this->gender . "  Emaili : " . $this->email . " Passwordi: " . $this->password;
     }
 }
 

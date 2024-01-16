@@ -6,16 +6,37 @@ if(isset($_POST["LogInButton"])){
     }else{
         $email= $_POST["email"];
         $password = $_POST["password"];
-
         include"users.php";
+        $users = [];
+
+        $usersQuery = "SELECT * FROM user";
+        $usersResult = mysqli_query($conn, $usersQuery);
+        
+        while($row = mysqli_fetch_assoc($usersResult)) {
+            $gender = "male";
+            if ($row['gender'] != "option1") {
+                $gender = "female";
+            }
+            $user = new User( //Constructor i user
+                $row['emriMbiemri'],
+                $gender,
+                $row['email'],
+                $row['password'],
+                $row['role']
+            );
+            echo $user->__toString(). "<br>";
+            $users[] = $user;
+        }
+        echo "<br><br>";
         $i= 0;
         foreach($users as $user){
-            if($user["email"] == $email && $user["password"] == $password){
+            echo "Trying: ".$user->getEmail()." with password: ".$user->getPassword()."<br>";
+            if($user->getEmail() == $email && $user->getPassword() == $password){
                 session_start();
 
-                $_SESSION["email"] = $user["email"];
-                $_SESSION["password"] = $password;
-                $_SESSION["role"] = $user["role"];
+                $_SESSION["email"] = $user->getEmail();
+                $_SESSION["password"] = $user->getPassword();
+                $_SESSION["role"] = $user->getRole();
                 $_SESSION["loginTime"] = date("h:i:s");
                 header("location:homepage.php");
                 exit();
