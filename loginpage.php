@@ -24,13 +24,13 @@ if(isset($_POST["LogInButton"])){
                 $row['password'],
                 $row['role']
             );
-            echo $user->__toString(). "<br>";
+            
             $users[] = $user;
         }
-        echo "<br><br>";
+        
         $i= 0;
         foreach($users as $user){
-            echo "Trying: ".$user->getEmail()." with password: ".$user->getPassword()."<br>";
+
             if($user->getEmail() == $email && $user->getPassword() == $password){
                 session_start();
 
