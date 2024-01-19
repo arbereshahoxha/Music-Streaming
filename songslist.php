@@ -1,6 +1,27 @@
-
-    <div id="songs-all">
-        <div class="songs-kanget">
+<div id="songs-all">
+<?php
+    include("db.php");
+    include("song.php");
+    
+    $sql = "select * from song";
+    $songsResult = mysqli_query($conn, $sql);
+    $songs = [];
+    while($row = mysqli_fetch_assoc($songsResult)) {
+        $song = new Song(
+            $row['songName'],
+            $row['songAuthors'],
+            $row['songImage'],
+            $row['songMedia']
+        );
+        $songs[] = $song;
+    }
+    foreach($songs as $song) {
+        $song->displaySong();
+    }
+?>
+ 
+        
+        <!-- <div class="songs-kanget">
             <img src="Fotot/Gajde.png">
             <h2>Gajde</h2>
             <p>Dhurata Dora,Elvana Gjata</p>
@@ -174,5 +195,5 @@
             <img src="Fotot/ja-fala.jpg">
             <h2>Ja Fala</h2>
             <p>Teuta Selimi</p>
-        </div>
+        </div> -->
     </div>

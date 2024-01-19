@@ -20,15 +20,44 @@ const durationContainer = document.getElementById("home-duration");
 let playState = "play";
 let muteState = "unmuted";
 
-
+let songLocation = "songs/"
 let songPointer = 0;
 let songs = [
-            "songs/ElaiUnMeTy.mp3",
-            "songs/ElaiJoti.mp3",
-            "songs/YllLimaniDafinaZeqiriKaje.mp3",
-            "songs/YllLimaniPerKonJeZbukuru.mp3",
-            "songs/YllLimaniMeJetu.mp3",
-            "songs/DhurataDoraElvanaGjataGajde.mp3",
+            "16Bars-Noizy.mp3",
+            "2003-Elai.mp3",
+            "Alkool-NoizyYllLimani.mp3",
+            "Benzema-Elai.mp3",
+            "Besame-DhurataDora.mp3",
+            "Criminal-DhurataDora.mp3",
+            "EKeniDit-RomeoLedriVula.mp3",
+            "Ex-ElvanaGjata.mp3",
+            "Fotografia-Blero.mp3",
+            "Gajde-DhurataDoraElvanaGjata.mp3",
+            "Hapa-NoizyYllLimani.mp3",
+            "Ika-Elai.mp3",
+            "JaFala-TeutaSelimi.mp3",
+            "JenaMbreter2-Noizy.mp3",
+            "Joti-Elai.mp3",
+            "Kaje-YllLimaniDafinaZeqiri.mp3",
+            "Kallma-NoizyDhurataDora.mp3",
+            "KuKu-Elai.mp3",
+            "Lale-Elai.mp3",
+            "Luj-DhurataDoraElvanaGjata.mp3",
+            "Malet-YllLimani.mp3",
+            "Medalioni-NoizyStresi.mp3",
+            "MeJetu-YllLimani.mp3",
+            "MiAmor-DhurataDoraNoizy.mp3",
+            "MuNda-Elai.mp3",
+            "NeFundTeBotes-Noizy.mp3",
+            "PaMu-DhurataDora.mp3",
+            "PerKonJeZbukuru-YllLimani.mp3",
+            "PrettyLittleFears-JCole.mp3",
+            "Rrotullo-ElvanaGjataDhurataDora.mp3",
+            "Teta-Elai.mp3",
+            "TikiTaka-Elai.mp3",
+            "UKry-YllLimani.mp3",
+            "UnMeTy-Elai.mp3",
+            "Yalla-NoizyYllLimani.mp3"
             ];
 audio.src = songs[0];
 
@@ -94,7 +123,7 @@ function playSong(song) {
     for(let i = 0; i < songs.length; i++) {
         if (song == songs[i]) {
             songPointer = i;
-            audio.src = songs[i];
+            audio.src = songLocation+songs[i];
             loadSong();
             audio.play()
             playState="pause";

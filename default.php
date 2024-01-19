@@ -1,33 +1,33 @@
 
 <!-- Songs -->
 <div id="home-songs">
-    <div class="home-kanget" onclick="playSong('songs/ElaiUnMeTy.mp3')">
-        <img src="Fotot/un-me-ty.png">
+    <div class="home-kanget" onclick="playSong('UnMeTy-Elai.mp3')">
+        <img src="fotot/un-me-ty.png">
         <h2>Un Me Ty</h2>
         <p>Elai</p>
     </div>
-    <div class="home-kanget" onclick="playSong('songs/ElaiJoti.mp3')">
-        <img src="Fotot/Joti.png">
+    <div class="home-kanget" onclick="playSong('Joti-Elai.mp3')">
+        <img src="fotot/Joti.png">
         <h2>Joti</h2>
         <p>Elai</p>
     </div>
-    <div class="home-kanget" onclick="playSong('songs/YllLimaniDafinaZeqiriKaje.mp3')">
-        <img src="Fotot/kaje.png">
+    <div class="home-kanget" onclick="playSong('Kaje-YllLimaniDafinaZeqiri.mp3')">
+        <img src="fotot/kaje.png">
         <h2>Kaje</h2>
         <p>Yll Limani, Dafina Zeqiri</p>
     </div>
-    <div class="home-kanget" onclick="playSong('songs/YllLimaniPerKonJeZbukuru.mp3')">
-        <img src="Fotot/per-kon-je-zbukuru.jpg">
+    <div class="home-kanget" onclick="playSong('PerKonJeZbukuru-YllLimani.mp3')">
+        <img src="fotot/per-kon-je-zbukuru.jpg">
         <h2>Per kon je zbukuru</h2>
         <p>Yll Limani</p>
     </div>
-    <div class="home-kanget" onclick="playSong('songs/YllLimaniMeJetu.mp3')">
-        <img src="Fotot/me-jetu.jpg">
+    <div class="home-kanget" onclick="playSong('MeJetu-YllLimani.mp3')">
+        <img src="fotot/me-jetu.jpg">
         <h2>Me Jetu</h2>
         <p>Yll Limani</p>
     </div>
-    <div class="home-kanget" onclick="playSong('songs/DhurataDoraElvanaGjataGajde.mp3')">
-        <img src="Fotot/Gajde.png">
+    <div class="home-kanget" onclick="playSong('Gajde-DhurataDoraElvanaGjata.mp3')">
+        <img src="fotot/Gajde.png">
         <h2>Gajde</h2>
         <p>Dhurata Dora,Elvana Gjata</p>
     </div>
