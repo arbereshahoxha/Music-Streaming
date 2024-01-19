@@ -153,14 +153,14 @@ const loadSong = () => {
 const previousSong = () => {
     if (songPointer == 0) {
         songPointer = songs.length - 1;
-        audio.src = songs[songPointer];
+        audio.src = songLocation+songs[songPointer];
         loadSong();
         audio.play();
         playState = "pause";
         playIconContainer.src = "icons/pause-button-white.png";
     } else {
         songPointer -= 1;
-        audio.src = songs[songPointer];
+        audio.src = songLocation+songs[songPointer];
         loadSong();
         audio.play();
         playState = "pause";
@@ -172,14 +172,14 @@ const previousSong = () => {
 const nextSong = () => {
     if (songPointer == songs.length - 1) {
         songPointer = 0;
-        audio.src = songs[songPointer];
+        audio.src = songLocation+songs[songPointer];
         loadSong();
         audio.play();
         playState = "pause";
         playIconContainer.src = "icons/pause-button-white.png";
     } else {
         songPointer += 1;
-        audio.src = songs[songPointer];
+        audio.src = songLocation+songs[songPointer];
         loadSong();
         audio.play();
         playState = "pause";
