@@ -61,9 +61,13 @@
         </div>
     </div>
     <div id="home-mediaPlayer">
-    <audio src="" type ="audio/mp3" preload="metadata" loop></audio>
-            <div id="home-songInformation">
-                asd
+    <audio src="" type ="audio/mp3" preload="metadata"></audio>
+            <div id="home-song-information">
+                <img src="" id="home-now-playing-img">
+                <div id="home-now-playing-text">
+                    <h2></h2>
+                    <p></p>
+                </div>
             </div>
             <div id="home-centerPlayer">
                 <div id="home-playButtons">

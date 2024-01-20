@@ -4,7 +4,7 @@ body,html{
     max-height: 100%;
     margin:0;
     /* padding:0; */
-    overflow: hidden;
+    /*overflow: hidden;*/
     font-family: 'Sora', sans-serif;
 }
 body{
@@ -242,10 +242,6 @@ header > p{
     justify-content: space-between;
     align-items: center;
 }
-#home-songInformation {
-    width: 25%;
-    height: 100%;
-}
 
 #home-centerPlayer {
     width: 50%;
@@ -290,6 +286,8 @@ header > p{
     height: 100%;
     margin: 0;
     padding: 0;
+    margin-right: 2%;
+    margin-left: -2%;
 }
 
 .home-playerButton {
@@ -410,3 +408,21 @@ input[type="range"]:focus {
     outline: none; /*remove default*/
 }
 
+
+#home-song-information {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+}
+
+#home-now-playing-img {
+    padding: 0;
+    margin-left: 6%;
+    margin-right: 5%;
+    height:90%;
+    border-radius: 5px;
+}
