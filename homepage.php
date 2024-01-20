@@ -4,7 +4,7 @@
   if(!isset($_SESSION['email']))
     header("location:loginpage.php");
   else{
-    if($_SESSION['role'] == "admin")
+    if($_SESSION['role'] == 1)
       $hide = "";
     else
       $hide = "hide";
@@ -50,10 +50,10 @@
                 <label id="home" onclick="loadContent('default.php')">Home</label>
                 <label id="songs" onclick="loadContent('songslist.php')">Songs</label>
                 <label id="genres" onclick="loadContent('genres.php')">Genres</label>
-                <label id="aboutus" onclick="loadContent('blog.php')">Blogs</label>
-                <label id="aboutus">About Us</label>
-                <label id="dashboard" onclick="loadcontent('dashboard.php')" class="<?php echo $hide?>">Dashboard</label>
-                
+                <label id="aboutus" onclick="loadContent('popular-artist.php')">Artists</label>
+                <label id="yoursongs" onclick="loadContent('upload-songs.php')">Your Songs</label>
+                <label id="dashboard" onclick="loadContent('dashboard.php')" class="<?php echo $hide?>">Dashboard</label>
+                <label id="aboutus">About Us</label>                
             </form>
         </div>
         <!-- Main page -->

@@ -1,26 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popular Artists</title>
-    <link rel="stylesheet" href="artists.css">
-</head>
-<body>
-    <header>
-        <div>
-        <a href="homepage.html"><img src="Fotot/home-header.jpg"></a>
-        </div>
-    </header>
-    <main>
-        <div class="artists-container">
-            <div class="artists-artist">
+ <div class="artists-container">
+ <?php 
+ include("db.php");
+ include("artist.php");
+
+    $sql="select * from artist";
+    $artistResult=mysqli_query($conn,$sql);
+    $artists=[];
+    while ($row = mysqli_fetch_assoc($artistResult)) {
+        $artist = new Artist(
+            $row['coverPhoto'],
+            $row['emri'],
+            $row['description'],
+            $row['readMore']
+        );
+        $artists[] = $artist;
+    }
+    foreach($artists as $artist){
+        $artist->displayArtist();
+    }
+ 
+ ?>
+            <!-- <div class="artists-artist">
                 <img src="Artists/Eminem.jpg">
                 <div class="artists-description">
                     <h2>Eminem</h2>
                     <p>Rapper, actor and music producer Eminem is one of the best-selling musicians of the 21st century and one of the most influential rappers of all time.
                         Born Marshall Bruce Mathers III in 1972 in Missouri, Eminem had a turbulent childhood. He dropped out of school in the ninth grade and worked odd jobs
-                        until finally making it as a rapper upon the release of The Slim Shady LP in early 1999. The album went multi-platinum, garnering Eminem two Grammy Awards and four MTV Video Music Awards.</p>
+                        until finally making it as a rapper upon the release of The Slim Shady LP in early 1999. The album went multi-platinum, garnering Eminem two Grammy Awards 
+                        and four MTV Video Music Awards.</p>
                     <a href="https://www.biography.com/musicians/eminem"><input type="button" value="Read More" id="artists-info"></a>
                 </div>
             </div>
@@ -236,9 +243,5 @@
                         songs have a very large fanbase in Albania.It is one of the bands that marked and indicated the path of Albanian rock music in the post-communism period.</p>
                     <a href="https://en.wikipedia.org/wiki/Elita_5"><input type="button" value="Read More" id="artists-info"></a>
                 </div>
-            </div>
-        </div>
-    </main>
-    
-</body>
-</html>
+            </div> -->
+</div>

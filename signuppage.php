@@ -21,6 +21,7 @@ if(isset($_POST['submit'])){
         $result = mysqli_query($conn , $sql);
         if($result){
             echo '<script>alert("SignUp succesful")</script>';
+            header("location: loginpage.php");
         }
     }elseif($count_user > 0){
         echo '<script>alert("This person already exists")</script>';
