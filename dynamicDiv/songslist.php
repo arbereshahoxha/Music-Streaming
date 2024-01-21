@@ -1,6 +1,6 @@
 <div id="songs-all">
 <?php
-    include("db.php");
+    include("../db.php");
     include("song.php");
     
     $sql = "select * from song";

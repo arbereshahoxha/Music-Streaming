@@ -1,6 +1,6 @@
  <div class="artists-container">
  <?php 
- include("db.php");
+ include("../db.php");
  include("artist.php");
 
     $sql="select * from artist";

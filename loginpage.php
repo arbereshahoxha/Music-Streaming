@@ -1,5 +1,5 @@
 <?php
-include "users.php";
+include "dynamicDiv/users.php";
 if(isset($_POST["LogInButton"])){
     if(empty($_POST["email"]) || empty($_POST["password"])){
         echo '<script>alert("Please fill in all the fields");</script>';
@@ -57,7 +57,7 @@ if(isset($_POST["LogInButton"])){
         <title>Login page</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="loginstyle.css">
+        <link rel="stylesheet" href="styling/loginstyle.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;700;800&family=Varela+Round&display=swap" rel="stylesheet">

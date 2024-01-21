@@ -1,5 +1,5 @@
 <?php
-include("users.php");
+include("dynamicDiv/users.php");
 
 if (isset($_POST['submit'])) {
 
@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
 <html>
     <head>
         <title>SignUp Page</title>
-        <link rel="stylesheet" href="signupstyle.css">
+        <link rel="stylesheet" href="styling/signupstyle.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;700;800&family=Varela+Round&display=swap" rel="stylesheet">
@@ -74,7 +74,7 @@ if (isset($_POST['submit'])) {
                 </div>
             </div>
         </div>
-        <script src="script.js"></script>
+        <script src="scripts/script.js"></script>
 
     </body>
 </html>

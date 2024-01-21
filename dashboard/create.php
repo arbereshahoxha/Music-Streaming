@@ -1,5 +1,5 @@
 <?php
-include("users.php");
+include("../dynamicDiv/users.php");
 
 if (isset($_POST['submit'])) {
     //Krijo user te ri nga post

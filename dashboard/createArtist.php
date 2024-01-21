@@ -1,6 +1,6 @@
 <?php
-include("db.php");
-include("artist.php");
+include("../db.php");
+include("../dynamicDiv/artist.php");
 
 if (isset($_POST['submit'])) {
     $coverPhoto = $_POST['coverPhoto'];

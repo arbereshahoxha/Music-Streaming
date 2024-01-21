@@ -29,10 +29,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RATATUNES</title>
-    <link rel="stylesheet" href="homepage.css">
-    <link rel="stylesheet" href="genres.css">
-    <link rel="stylesheet" href="songslist.css">
-    <link rel="stylesheet" href="artists.css">
+    <link rel="stylesheet" href="styling/homepage.css">
+    <link rel="stylesheet" href="styling/genres.css">
+    <link rel="stylesheet" href="styling/songslist.css">
+    <link rel="stylesheet" href="styling/artists.css">
 
     <!-- Using PHP include refreshes the page and reloads the entire music player logic-->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -47,25 +47,9 @@
             }
             });
         }
-
-        function submitForm(page, formID) {
-            let form = document.getElementById(formID);
-            let formData = new FormData(form); //Te dhenat e formes
-            fetch(page, {
-                method: "POST",
-                body: formData //Dergo te dhenat e formes
-            })
-            .then(response => response.text())
-            .then(data => {
-                console.log(data);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-        }   
         
         //default
-        loadContent('default.php');
+        loadContent('dynamicDiv/default.php');
     </script>
 </head>
 <body>
@@ -76,10 +60,10 @@
     <div id="home-main-content">
         <div id="home-nav-bar">
             <form method="post" id="myForm">
-                <label id="home" onclick="loadContent('default.php')">Home</label>
-                <label id="songs" onclick="loadContent('songslist.php')">Songs</label>
-                <label id="genres" onclick="loadContent('genres.php')">Genres</label>
-                <label id="aboutus" onclick="loadContent('popular-artist.php')">Artists</label>
+                <label id="home" onclick="loadContent('dynamicDiv/default.php')">Home</label>
+                <label id="songs" onclick="loadContent('dynamicDiv/songslist.php')">Songs</label>
+                <label id="genres" onclick="loadContent('dynamicDiv/genres.php')">Genres</label>
+                <label id="aboutus" onclick="loadContent('dynamicDiv/popular-artist.php')">Artists</label>
                 <label id="yoursongs" onclick="loadContent('upload-songs.php')" class="<?php echo $hideYourSongs ?>">Your Songs</label>
                 <label id="dashboard" onclick="loadContent('dashboard.php')" class="<?php echo $hideDashboard ?>">Dashboard</label>
                 <label id="aboutus">About Us</label>                
@@ -117,7 +101,7 @@
                 <input type="range" class="home-shortSlider" id="home-volume-slider" max="100" value="100">
             </div>
     </div>
-    <script src="mediaPlayer.js"></script>
+    <script src="scripts/mediaPlayer.js"></script>
 </body>
 </html>
 

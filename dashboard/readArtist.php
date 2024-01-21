@@ -1,15 +1,16 @@
 <table>
     <tr>
         <th>ID</th>
-        <th>First and Last Name</th>
-        <th>Gender</th>
-        <th>Email</th>
-        <th>Role</th>
+        <th>Cover Photo</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>ReadMore</th>
         <th>Action</th>
     </tr>
     <?php
-    include("users.php");
-    $sql="select ID,emriMbiemri,gender,email,role from user";
+    include("../db.php");
+    include("../dynamicDiv/artist.php");
+    $sql="select * from artist";
     $result=mysqli_query($conn,$sql);
     
     if(!$result){
@@ -19,10 +20,10 @@
         echo"
         <tr>
             <td>$row[ID]</td>
-            <td>$row[emriMbiemri]</td>
-            <td>$row[gender]</td>
-            <td>$row[email]</td>
-            <td>$row[role]</td>
+            <td>$row[coverPhoto]</td>
+            <td>$row[emri]</td>
+            <td>$row[description]</td>
+            <td>$row[readMore]</td>
             <td>
                 <a href='edit.php' id=$row[ID]>Edit</a>
                 <a href='delete.php' id=$row[ID]>Delete</a>

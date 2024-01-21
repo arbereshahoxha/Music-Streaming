@@ -35,7 +35,7 @@
         $this->readMore = $readMore;
     }
     public function __toString(){
-        return $this->getCoverPhoto . " - " . $this->getEmri ." - " . $this->getDescription ." - " . $this->getReadMore;
+        return $this->getCoverPhoto() . " - " . $this->getEmri() ." - " . $this->getDescription() ." - " . $this->getReadMore();
     }
     public function displayArtist(){
         echo "<div class='artists-artist'>";
