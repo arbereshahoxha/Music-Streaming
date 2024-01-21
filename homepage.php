@@ -1,13 +1,26 @@
 <?php
   session_start();
-  $hide="";
+  $hideDashboard="";
+  $hideYourSongs="";
+
   if(!isset($_SESSION['email']))
     header("location:loginpage.php");
   else{
-    if($_SESSION['role'] == 1)
-      $hide = "";
-    else
-      $hide = "hide";
+    $userRole = $_SESSION['role'];
+    switch($userRole){
+        case 0:
+            $hideDashboard = "hide";
+            $hideYourSongs = "hide";
+            break;
+        case 1:
+            $hideDashboard = "hide";
+            $hideYourSongs = "";
+            break;
+        case 2:
+            $hideDashboard = "";
+            $hideYourSongs = "";
+            break;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -51,8 +64,8 @@
                 <label id="songs" onclick="loadContent('songslist.php')">Songs</label>
                 <label id="genres" onclick="loadContent('genres.php')">Genres</label>
                 <label id="aboutus" onclick="loadContent('popular-artist.php')">Artists</label>
-                <label id="yoursongs" onclick="loadContent('upload-songs.php')">Your Songs</label>
-                <label id="dashboard" onclick="loadContent('dashboard.php')" class="<?php echo $hide?>">Dashboard</label>
+                <label id="yoursongs" onclick="loadContent('upload-songs.php')" class="<?php echo $hideYourSongs ?>">Your Songs</label>
+                <label id="dashboard" onclick="loadContent('dashboard.php')" class="<?php echo $hideDashboard ?>">Dashboard</label>
                 <label id="aboutus">About Us</label>                
             </form>
         </div>
