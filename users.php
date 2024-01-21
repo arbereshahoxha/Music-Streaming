@@ -1,5 +1,5 @@
 <?php
-// include("db.php");
+include("db.php");
 
 $user1 =[
     "name" => "Admin",
@@ -55,6 +55,41 @@ class User{
     }
     public function __toString(){
         return "Roli : ". $this->role ."  Emri dhe mbiemri : " . $this->emriMbiemri . "  Gjinia : " . $this->gender . "  Emaili : " . $this->email . " Passwordi: " . $this->password;
+    }
+
+    public function ekziston($conn) {
+        $sql = "SELECT * FROM user WHERE emriMbiemri='$this->emriMbiemri'";
+        $result = mysqli_query($conn, $sql);
+        $count_user = mysqli_num_rows($result);
+
+        $sql = "SELECT * FROM user WHERE email='$this->email'";
+        $result = mysqli_query($conn, $sql);
+        $count_email = mysqli_num_rows($result);
+
+        if ($count_user == 0 && $count_email == 0) {
+            return false; //Nuk ekziston
+        } else {
+            return true; //Ekziston ne databaze
+        }
+        
+    }
+    public function addToDatabase($conn) {
+        if (!$this->ekziston($conn)) {
+            //nese nuk ekziston ne databaze
+            //shto ne databaze
+            $sql = "INSERT INTO user(emriMbiemri, gender, email, password, role) VALUES('$this->emriMbiemri', '$this->gender', '$this->email', '$this->password', $this->role)";
+            $result = mysqli_query($conn, $sql);
+            if ($result) {
+                echo '<script>alert("User registered successfully");</script>';
+            }
+            //Nese nuk mund te shtohet ne databaze atehere ka server/databaze error
+            else {
+                echo '<script>alert("There has been a server error");</script>';
+            }
+        } else {
+            //Nese if kushti nuk plotesohet i bie qe useri ekziston ne databaze
+            echo '<script>alert("User already exists!");</script>';
+        }
     }
 }
 

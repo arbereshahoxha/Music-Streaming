@@ -8,7 +8,6 @@
         <th>Action</th>
     </tr>
     <?php
-    include("db.php");
     include("users.php");
     $sql="select ID,emriMbiemri,gender,email,role from user";
     $result=mysqli_query($conn,$sql);

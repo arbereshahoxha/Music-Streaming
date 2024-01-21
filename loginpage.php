@@ -1,12 +1,11 @@
 <?php
-include("db.php");
+include "users.php";
 if(isset($_POST["LogInButton"])){
     if(empty($_POST["email"]) || empty($_POST["password"])){
         echo '<script>alert("Please fill in all the fields");</script>';
     }else{
         $email= $_POST["email"];
         $password = $_POST["password"];
-        include"users.php";
         $users = [];
 
         $usersQuery = "SELECT * FROM user";

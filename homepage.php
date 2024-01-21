@@ -47,6 +47,22 @@
             }
             });
         }
+
+        function submitForm(page, formID) {
+            let form = document.getElementById(formID);
+            let formData = new FormData(form); //Te dhenat e formes
+            fetch(page, {
+                method: "POST",
+                body: formData //Dergo te dhenat e formes
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }   
         
         //default
         loadContent('default.php');

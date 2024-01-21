@@ -1,4 +1,22 @@
-<?php include("signUp.php");?>
+<?php
+include("users.php");
+
+if (isset($_POST['submit'])) {
+    //Krijo user te ri nga post
+    $user = new User(
+        $_POST['emriMbiemri'],
+        $_POST['gender'],
+        $_POST['email'],
+        $_POST['password'],
+        0
+    );
+
+    //Shto userin ne databaze
+    $user->addToDatabase($conn);
+    //Duhet me shku tek homepage.php sepse POST forma te dergon ne create.php
+    header("Location: homepage.php");
+}
+?>
 
 <h1>Create User</h1>
 <form action="<?php echo ($_SERVER['PHP_SELF']); ?>" method="POST" onsubmit="return validateForm()">

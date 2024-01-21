@@ -1,4 +1,21 @@
-<?php include("signUp.php"); ?>
+<?php
+include("users.php");
+
+if (isset($_POST['submit'])) {
+
+    //Krijo user te ri nga post
+    $user = new User(
+        $_POST['emriMbiemri'],
+        $_POST['gender'],
+        $_POST['email'],
+        $_POST['password'],
+        0
+    );
+
+    //Shto userin ne databaze
+    $user->addToDatabase($conn);
+}
+?>
 
 <html>
     <head>
