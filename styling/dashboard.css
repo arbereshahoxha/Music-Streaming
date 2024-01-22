@@ -1,0 +1,82 @@
+body,html{
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
+    margin:0;
+    overflow: hidden;
+    font-family: 'Sora', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    align-items: center;
+}
+header{
+    width: 100%;
+    min-height: 120px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header > h1{
+    color: pink;
+    font-weight: bolder;
+    font-size: 24;
+}
+
+img {
+    margin-left: 20px;
+    max-width: 50px;
+}
+.title {
+    margin-top: 0;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: pink;
+    background-color: black;
+    text-align: center;
+    width: 100%;
+}
+
+#logOutButton{
+    border: none;
+    border-radius: 15px;
+    background-color: #666666;
+    height: 25px;
+    width: 65px;
+}
+
+#users_artists {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+.users_artists_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2%;
+    height: 300px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: rgb(255, 209, 194);
+    
+}
+
+
+.user_artists_button{
+    margin: 10px;
+    width: 40%;
+    height: 55px;
+    border-radius: 30px;
+    background-color: black;
+    color: rgb(255, 209, 194);
+    font-size: 25px;
+    font-weight: bold;
+/*    font-family: 'Sora', sans-serif;*/
+}

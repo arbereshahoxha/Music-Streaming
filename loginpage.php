@@ -1,5 +1,5 @@
 <?php
-include "dynamicDiv/users.php";
+include ("dynamicDiv/users.php");
 if(isset($_POST["LogInButton"])){
     if(empty($_POST["email"]) || empty($_POST["password"])){
         echo '<script>alert("Please fill in all the fields");</script>';

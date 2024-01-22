@@ -1,0 +1,43 @@
+body,html{
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
+    margin:0;
+    font-family: 'Sora', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    color: white;
+}
+header{
+    min-height: 120px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header > h1{
+    color: pink;
+    font-weight: bolder;
+    font-size: 24;
+}
+
+img {
+    margin-left: 20px;
+    max-width: 50px;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+th, td {
+    height: 40px;
+    text-align: center;
+}
+th {
+    background-color: rgb(55, 0, 59);
+}
+
