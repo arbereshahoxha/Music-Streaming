@@ -42,8 +42,7 @@ if(isset($_POST["LogInButton"])){
             }else{
                 $i++;
                 if($i == sizeof($users)) {
-                    echo "Incorrect email or password";
-                    exit();
+                    echo '<script>alert("Wrong login credentials!");</script>';
                 }
             }
         }
@@ -87,9 +86,9 @@ if(isset($_POST["LogInButton"])){
 
                     <div class="loginForm">
                         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
-                        <input type="text" name="email" placeholder="Email">
-                        <input type="password" name="password" placeholder="Password">
-                        <a href="homepage.php"><button name="LogInButton">Log In</button></a>
+                            <input type="text" name="email" placeholder="Email">
+                            <input type="password" name="password" placeholder="Password">
+                            <button name="LogInButton">Log In</button>
                         </form>
                     </div>
                 </div>
