@@ -1,15 +1,5 @@
 <?php
 include("db.php");
-
-$user1 =[
-    "name" => "Admin",
-    "lastname" =>"Admini",
-    "email" => "admin@gmail.com",
-    "username" => "itstheadmin",
-    "password" => "admin123",
-    "role" => "admin"
-];
-
 class User{
     private $ID; //Readonly
     private $emriMbiemri;
@@ -17,6 +7,7 @@ class User{
     private $email;
     private $password;
     private $role;
+    private $connection;
     public function __construct($ID, $emriMbiemri,$gender,$email,$password,$role){
         $this->ID = $ID;
         $this->emriMbiemri = $emriMbiemri;
@@ -24,6 +15,8 @@ class User{
         $this->email = $email;
         $this->password = $password;
         $this->role = $role;
+        $conn = new DatabaseConenction;
+        $this->connection = $conn->startConnection();
     }
     public function getID() {
         return $this->ID;
@@ -95,6 +88,31 @@ class User{
             //Nese if kushti nuk plotesohet i bie qe useri ekziston ne databaze
             echo '<script>alert("User already exists!");</script>';
         }
+    }
+    public function getUserByID($conn, $ID) {
+        $sql = "select * from user where ID = $ID";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            return new User(
+                $row['ID'],
+                $row['emriMbiemri'],
+                $row['gender'],
+                $row['email'],
+                $row['password'],
+                $row['role']
+            );
+        } else {
+            return null; // User not found
+        }
+    }
+    public static function deleteUser($conn, $ID) {
+        $sql = "delete from user where ID = ?";
+
+        $statement = $conn->prepare($sql);
+
+        $statement->execute([$ID]);
     }
 }
 

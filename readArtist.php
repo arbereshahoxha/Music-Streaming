@@ -49,8 +49,14 @@ else{
                     <td>$row[description]</td>
                     <td>$row[readMore]</td>
                     <td>
-                        <a href='edit.php' id=$row[ID]>Edit</a>
-                        <a href='delete.php' id=$row[ID]>Delete</a>
+                    <form action='editArtist.php'>
+                        <input type='hidden' name='ID' value='{$row['ID']}'>
+                        <button type='submit' name='edit'>Edit</button>
+                    </form>
+                    <form action='deleteArtist.php'>
+                        <input type='hidden' name='ID' value='{$row['ID']}'>
+                        <button type='submit' name='delete'>Delete</button>
+                    </form>
                     </td>
                 </tr>
                 ";

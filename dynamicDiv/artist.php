@@ -1,17 +1,20 @@
 <?php
-include("../db.php");
+include("db.php");
  class Artist{
     private $ID; //Readonly
     private $coverPhoto;
     private $emri;
     private $description;
     private $readMore;
+    private $connection;
     public function __construct($ID, $coverPhoto,$emri,$description,$readMore){
         $this->ID = $ID;
         $this->coverPhoto = $coverPhoto;
         $this->emri= $emri;
         $this->description=$description;
         $this->readMore=$readMore;
+        $conn = new DatabaseConenction;
+        $this->connection = $conn->startConnection();
     }
     public function getID() {
         return $this->ID;
@@ -86,6 +89,31 @@ include("../db.php");
             //Nese if kushti nuk plotesohet i bie qe useri ekziston ne databaze
             echo '<script>alert("Artist already exists!");</script>';
         }
+    }
+    public function getArtistByID($conn,$ID){
+        $sql = "select * from artist where ID=$ID";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            return new User(
+                $row['ID'],
+                $row['emriMbiemri'],
+                $row['gender'],
+                $row['email'],
+                $row['password'],
+                $row['role']
+            );
+        } else {
+            return null; // Artist not found
+        }
+    }
+    public static function deleteArtist($conn, $ID) {
+        $sql = "delete from artist where ID = ?";
+
+        $statement = $conn->prepare($sql);
+
+        $statement->execute([$ID]);
     }
 }
 
