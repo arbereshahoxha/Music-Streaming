@@ -16,11 +16,12 @@ include("dynamicDiv/users.php");
 if (isset($_POST['submit'])) {
     //Krijo user te ri nga post
     $user = new User(
+        0, //Random ID for constructor
         $_POST['emriMbiemri'],
         $_POST['gender'],
         $_POST['email'],
         $_POST['password'],
-        0
+        $_POST['role']
     );
 
     //Shto userin ne databaze
@@ -57,6 +58,9 @@ if (isset($_POST['submit'])) {
 
             <label for="password">Password</label>
             <input type="password" id="password" name="password" required>
+
+            <label for="role">Password</label>
+            <input type="text" id="role" name="role" required>
 
             <button type="submit" name="submit">Create User</button>
         </form>

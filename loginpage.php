@@ -17,6 +17,7 @@ if(isset($_POST["LogInButton"])){
                 $gender = "female";
             }
             $user = new User( //Constructor i user
+                $row['ID'],
                 $row['emriMbiemri'],
                 $gender,
                 $row['email'],

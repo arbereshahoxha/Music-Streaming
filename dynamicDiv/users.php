@@ -11,17 +11,22 @@ $user1 =[
 ];
 
 class User{
+    private $ID; //Readonly
     private $emriMbiemri;
     private $gender;
     private $email;
     private $password;
     private $role;
-    public function __construct($emriMbiemri,$gender,$email,$password,$role){
+    public function __construct($ID, $emriMbiemri,$gender,$email,$password,$role){
+        $this->ID = $ID;
         $this->emriMbiemri = $emriMbiemri;
         $this->gender = $gender;
         $this->email = $email;
         $this->password = $password;
         $this->role = $role;
+    }
+    public function getID() {
+        return $this->ID;
     }
     public function getEmriMbiemri(){
         return $this->emriMbiemri;

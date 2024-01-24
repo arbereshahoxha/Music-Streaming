@@ -16,6 +16,7 @@ include("dynamicDiv/artist.php");
 if (isset($_POST['submit'])) {
     //Krijo nje artist te ri nga post
     $artist = new Artist(
+        0, //Random ID for constructor
         $_POST['coverPhoto'],
         $_POST['emri'],
         $_POST['description'],

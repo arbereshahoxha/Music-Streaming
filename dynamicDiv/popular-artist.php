@@ -7,6 +7,7 @@
     $artists=[];
     while ($row = mysqli_fetch_assoc($artistResult)) {
         $artist = new Artist(
+            $row['ID'],
             $row['coverPhoto'],
             $row['emri'],
             $row['description'],

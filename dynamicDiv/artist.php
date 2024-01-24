@@ -1,15 +1,20 @@
 <?php
 include("../db.php");
  class Artist{
+    private $ID; //Readonly
     private $coverPhoto;
     private $emri;
     private $description;
     private $readMore;
-    public function __construct($coverPhoto,$emri,$description,$readMore){
+    public function __construct($ID, $coverPhoto,$emri,$description,$readMore){
+        $this->ID = $ID;
         $this->coverPhoto = $coverPhoto;
         $this->emri= $emri;
         $this->description=$description;
         $this->readMore=$readMore;
+    }
+    public function getID() {
+        return $this->ID;
     }
     public function getCoverPhoto(){
         return $this->coverPhoto;

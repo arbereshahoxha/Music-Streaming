@@ -5,6 +5,7 @@ if (isset($_POST['submit'])) {
 
     //Krijo user te ri nga post
     $user = new User(
+        0, //Random ID for constructor
         $_POST['emriMbiemri'],
         $_POST['gender'],
         $_POST['email'],
