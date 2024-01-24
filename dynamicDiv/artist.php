@@ -1,5 +1,5 @@
 <?php
-include("db.php");
+include("../db.php");
  class Artist{
     private $coverPhoto;
     private $emri;
