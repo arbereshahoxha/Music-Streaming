@@ -2,13 +2,14 @@
 
 include("dynamicDiv/users.php");
 
-if (isset($_GET['ID'])) {
-    $userID = $_GET['ID'];
+if (isset($_POST['ID'])) {
+    $userID = $_POST['ID'];
 
-    $conn = new DatabaseConnection; 
-    $connection = $conn->startConnection();
+    // $conn = new DatabaseConnection; 
+    // $connection = $conn->startConnection();
+    $user = new User();
 
-    User::deleteUser($connection, $userID);
+    $user -> deleteUser( $userID);
     header("location: dashboard.php");
 } else {
     echo "Invalid ID";

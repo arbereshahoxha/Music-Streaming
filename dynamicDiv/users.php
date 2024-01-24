@@ -89,30 +89,26 @@ class User{
             echo '<script>alert("User already exists!");</script>';
         }
     }
-    public function getUserByID($conn, $ID) {
-        $sql = "select * from user where ID = $ID";
-        $result = $conn->query($sql);
-
-        if ($result->num_rows > 0) {
-            $row = $result->fetch_assoc();
-            return new User(
-                $row['ID'],
-                $row['emriMbiemri'],
-                $row['gender'],
-                $row['email'],
-                $row['password'],
-                $row['role']
-            );
-        } else {
-            return null; // User not found
-        }
+    public function deleteUser($conn) {
+        $conn -> mysqli_query("delete from user where ID = '$this->ID'");
     }
-    public static function deleteUser($conn, $ID) {
-        $sql = "delete from user where ID = ?";
+}
+function getUserByID($conn, $ID) {
+    $sql = "select * from user where ID ='$ID'";
+    $result = $conn->query($sql);
 
-        $statement = $conn->prepare($sql);
-
-        $statement->execute([$ID]);
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        return new User(
+            $row['ID'],
+            $row['emriMbiemri'],
+            $row['gender'],
+            $row['email'],
+            $row['password'],
+            $row['role']
+        );
+    } else {
+        return null; // User not found
     }
 }
 

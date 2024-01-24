@@ -53,7 +53,7 @@
                         <td>$row[email]</td>
                         <td>$row[role]</td>
                         <td>
-                            <form action='edit.php'>
+                            <form action='edit.php' method='POST'>
                                 <input type='hidden' name='ID' value='{$row['ID']}'>
                                 <button type='submit' name='edit'>Edit</button>
                             </form>
