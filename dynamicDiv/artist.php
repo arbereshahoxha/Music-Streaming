@@ -105,12 +105,29 @@ include("db.php");
             return null; // Artist not found
         }
     }
-    public static function deleteArtist($conn, $ID) {
-        $sql = "delete from artist where ID = ?";
+    public function deleteArtist($conn) {
+        $conn -> query("delete from artist where ID = '$this->ID'");
+    }
+    public function editArtist($conn) {
+	    $sql = "UPDATE artist SET coverPhoto='$this->coverPhoto',emri='$this->emri',description='$this->description',readMore='$this->readMore' where ID='$this->ID'";
+	    $conn -> query($sql);
+    }
+}
+function getArtistByID($conn,$ID){
+    $sql = "select * from artist where ID=$ID";
+    $result = $conn->query($sql);
 
-        $statement = $conn->prepare($sql);
-
-        $statement->execute([$ID]);
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        return new Artist(
+            $row['ID'],
+            $row['coverPhoto'],
+            $row['emri'],
+            $row['description'],
+            $row['readMore']
+        );
+    } else {
+        return null; // Artist not found
     }
 }
 

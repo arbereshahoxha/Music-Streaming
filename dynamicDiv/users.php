@@ -72,7 +72,7 @@ class User{
         if (!$this->ekziston($conn)) {
             //nese nuk ekziston ne databaze
             //shto ne databaze
-            $sql = "INSERT INTO user(emriMbiemri, gender, email, password, role) VALUES('$this->emriMbiemri', '$this->gender', '$this->email', '$this->password', $this->role)";
+            $sql = "INSERT INTO user(emriMbiemri, gender, email, password, role) VALUES('$this->emriMbiemri', '$this->gender', '$this->email', '$this->password', '$this->role')";
             $result = mysqli_query($conn, $sql);
             if ($result) {
                 echo '<script>alert("User registered successfully");</script>';
@@ -89,7 +89,13 @@ class User{
     public function deleteUser($conn) {
         $conn -> query("DELETE from user where ID = '$this->ID'");
     }
+
+    public function editUser($conn) {
+	    $sql = "UPDATE user SET emriMbiemri='$this->emriMbiemri',gender='$this->gender',email='$this->email',password='$this->password',role='$this->role' where ID='$this->ID'";
+	    $conn -> query($sql);
+    }
 }
+
 function getUserByID($conn, $ID) {
     $sql = "SELECT * from user where ID = '$ID'";
     $result = $conn->query($sql);

@@ -2,13 +2,10 @@
 
 include("dynamicDiv/artist.php");
 
-if (isset($_GET['ID'])) {
-    $artistID = $_GET['ID'];
-
-    $conn = new DatabaseConnection; 
-    $connection = $conn->startConnection();
-
-    Artist::deleteArtist($connection, $artistID);
+if (isset($_POST['ID'])) {
+    $artistID = $_POST['ID'];
+    $artist = getArtistByID($conn,$artistID);
+    $artist -> deleteArtist($conn);
     header("location: dashboard.php");
 } else {
     echo "Invalid ID";

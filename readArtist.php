@@ -49,11 +49,11 @@ else{
                     <td>$row[description]</td>
                     <td>$row[readMore]</td>
                     <td>
-                    <form action='editArtist.php'>
+                    <form action='editArtist.php' method='POST'>
                         <input type='hidden' name='ID' value='{$row['ID']}'>
                         <button type='submit' name='edit'>Edit</button>
                     </form>
-                    <form action='deleteArtist.php'>
+                    <form action='deleteArtist.php' method='POST'>
                         <input type='hidden' name='ID' value='{$row['ID']}'>
                         <button type='submit' name='delete'>Delete</button>
                     </form>
