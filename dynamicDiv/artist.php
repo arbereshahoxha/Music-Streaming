@@ -6,15 +6,12 @@ include("db.php");
     private $emri;
     private $description;
     private $readMore;
-    private $connection;
     public function __construct($ID, $coverPhoto,$emri,$description,$readMore){
         $this->ID = $ID;
         $this->coverPhoto = $coverPhoto;
         $this->emri= $emri;
         $this->description=$description;
         $this->readMore=$readMore;
-        $conn = new DatabaseConenction;
-        $this->connection = $conn->startConnection();
     }
     public function getID() {
         return $this->ID;

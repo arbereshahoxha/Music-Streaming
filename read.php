@@ -44,7 +44,8 @@
                         $row['gender'] = 'Male';
                     } else if ($row['gender'] == 'option2') {
                         $row['gender'] = 'Female';
-                    } 
+                    }
+                    $ID = $row['ID'];
                     echo"
                     <tr>
                         <td>$row[ID]</td>
@@ -54,11 +55,11 @@
                         <td>$row[role]</td>
                         <td>
                             <form action='edit.php' method='POST'>
-                                <input type='hidden' name='ID' value='{$row['ID']}'>
+                                <input type='hidden' name='ID' value='$ID'>
                                 <button type='submit' name='edit'>Edit</button>
                             </form>
-                            <form action='delete.php'>
-                                <input type='hidden' name='ID' value='{$row['ID']}'>
+                            <form action='delete.php' method='POST'>
+                                <input type='hidden' name='ID' value='$ID'>
                                 <button type='submit' name='delete'>Delete</button>
                             </form>
                         </td>

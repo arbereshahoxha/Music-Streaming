@@ -7,7 +7,6 @@ class User{
     private $email;
     private $password;
     private $role;
-    private $connection;
     public function __construct($ID, $emriMbiemri,$gender,$email,$password,$role){
         $this->ID = $ID;
         $this->emriMbiemri = $emriMbiemri;
@@ -15,8 +14,6 @@ class User{
         $this->email = $email;
         $this->password = $password;
         $this->role = $role;
-        $conn = new DatabaseConenction;
-        $this->connection = $conn->startConnection();
     }
     public function getID() {
         return $this->ID;
@@ -90,15 +87,16 @@ class User{
         }
     }
     public function deleteUser($conn) {
-        $conn -> mysqli_query("delete from user where ID = '$this->ID'");
+        $conn -> query("DELETE from user where ID = '$this->ID'");
     }
 }
 function getUserByID($conn, $ID) {
-    $sql = "select * from user where ID ='$ID'";
+    $sql = "SELECT * from user where ID = '$ID'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
+
         return new User(
             $row['ID'],
             $row['emriMbiemri'],
