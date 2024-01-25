@@ -1,5 +1,5 @@
 <?php
-include("db.php");
+    include("db.php");
  class Artist{
     private $ID; //Readonly
     private $coverPhoto;
@@ -47,7 +47,7 @@ include("db.php");
         echo "<div class='artists-artist'>";
         echo " <img src='Artists/$this->coverPhoto'>";
         echo " <div class='artists-description'>";
-        echo "<h2>$this->emri</h2>";
+        echo "<h3>$this->emri</h3>";
         echo "<p>$this->description</p>";
         echo "<a href='$this->readMore'><input type='button' value='Read More' id='artists-info'></a>";
         echo "</div>";

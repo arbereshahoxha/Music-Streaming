@@ -6,29 +6,23 @@
     justify-content: center;
     text-align: center;
     margin: auto;
-    padding: 10px;
+    padding: 5px;
 }
 .artists-artist{
     display: flex;
     text-align: center;
     margin: 15px;
-}
-.artists-artist > img{
-    height: 250px;
-    width: 250px;
-    margin: 15px;
-    border-radius: 10px;
-
-}
-.artists-artist{
     position: relative;
     margin-top: 100px;
     cursor: pointer;
     overflow: hidden;
 }
+
 .artists-artist > img{
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
+    margin: 15px;
+    border-radius: 10px;
     transition: 0.3s ease;
 }
 .artists-description{
@@ -44,7 +38,7 @@
 }
 .artists-description h2{
     color: #fff;
-    font-size: 45px;
+    font-size: 20px;
     text-align: center;
     margin-top: 50px;
 }

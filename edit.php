@@ -18,7 +18,7 @@ if(isset($_POST['submit'])){
 
     $user = new User($ID,$emriMbiemri,$gender,$email,$password,$role);
     $user -> editUser($conn);
-    header("location:dashboard.php");
+    header("location:read.php");
 }
 
 ?>
@@ -29,9 +29,17 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RATATUNES EDIT USER</title>
+    <link rel="stylesheet" href="styling/create.css">
+
+
 </head>
 <body>
-<h1>Edit User</h1>
+<header>
+    <a href="artistDashboard.php"><img src="icons/left-arrow.png" alt="return" id="return"></a>
+    <h1>RATATUNES EDIT USER</h1>
+    <button id="logOutButton" name="logOutButton" onclick="window.location.href='logout.php'">Log Out</button>
+</header>
+
     <form action="" method="POST">
     <input type="text" name="ID" value="<?=$user->getID() ?>" readonly>
     <input type="text" name="emriMbiemri" value="<?=$user->getEmriMbiemri() ?>">

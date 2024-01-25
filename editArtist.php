@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
 
     $artist = new Artist($ID,$coverPhoto,$emri,$description,$readMore);
     $artist -> editArtist($conn);
-    header("location:dashboard.php");
+    header("location:readArtist.php");
 }
 
 ?>
@@ -25,10 +25,15 @@ if(isset($_POST['submit'])){
 <html>
     <head>
         <title>RATATUNES EDIT ARTIST</title>
+        <link rel="stylesheet" href="styling/create.css">
     </head>
     <body>
+    <header>
+            <a href="artistDashboard.php"><img src="icons/left-arrow.png" alt="return" id="return"></a>
+            <h1>RATATUNES EDIT ARTIST</h1>
+            <button id="logOutButton" name="logOutButton" onclick="window.location.href='logout.php'">Log Out</button>
+        </header>
         <form action="" method="POST" >
-        <h1>Edit Artist</h1>
 
         <label for="id">ID :</label>
         <input type="text" id="ID" name="ID" value="<?=$artist->getID() ?>" required>
