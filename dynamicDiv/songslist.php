@@ -8,10 +8,12 @@
     $songs = [];
     while($row = mysqli_fetch_assoc($songsResult)) {
         $song = new Song(
+            $row['ID'],
             $row['songName'],
             $row['songAuthors'],
             $row['songImage'],
-            $row['songMedia']
+            $row['songMedia'],
+            $row['artistID']
         );
         $songs[] = $song;
     }

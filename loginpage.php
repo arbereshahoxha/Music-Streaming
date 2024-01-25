@@ -33,7 +33,9 @@ if(isset($_POST["LogInButton"])){
 
             if($user->getEmail() == $email && $user->getPassword() == $password){
                 session_start();
-
+                
+                $_SESSION["ID"] = $user->getID();
+                $_SESSION["emriMbiemri"] = $user->getEmriMbiemri();
                 $_SESSION["email"] = $user->getEmail();
                 $_SESSION["password"] = $user->getPassword();
                 $_SESSION["role"] = $user->getRole();

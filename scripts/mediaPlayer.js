@@ -248,3 +248,12 @@ volumeSlider.addEventListener('input', (e) => {
     audio.volume = value/100;
 });
 
+function playRandomSong() {
+    let randomNumber = Math.floor(Math.random() *  34); //35 Songs starting from 0 index
+    songPointer = randomNumber;
+    audio.src = songLocation+songs[songPointer].media;
+    loadSong();
+    audio.play();
+    playState="pause";
+    playIconContainer.src = "icons/pause-button-white.png";
+}

@@ -8,6 +8,9 @@
             case 0:
                 header("location:homepage.php");
                 break;
+            case 1:
+                header("location:homepage.php");
+                break;    
             default:
                 break;
         }

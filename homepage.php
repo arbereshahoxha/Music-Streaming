@@ -64,7 +64,7 @@
                 <label id="songs" onclick="loadContent('dynamicDiv/songslist.php')">Songs</label>
                 <label id="genres" onclick="loadContent('dynamicDiv/genres.php')">Genres</label>
                 <label id="aboutus" onclick="loadContent('dynamicDiv/popular-artist.php')">Artists</label>
-                <label id="yoursongs" onclick="loadContent('upload-songs.php')" class="<?php echo $hideYourSongs ?>">Your Songs</label>
+                <label id="uploadsongs" onclick="window.location.href = 'artistDashboard.php'" class="<?php echo $hideYourSongs ?>">Upload Songs</label>
                 <label id="dashboard" onclick="window.location.href = 'dashboard.php'" class="<?php echo $hideDashboard ?>">Dashboard</label>
                 <label id="aboutus">About Us</label>                
             </form>

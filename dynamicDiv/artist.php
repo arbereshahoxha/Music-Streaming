@@ -87,24 +87,7 @@ include("db.php");
             echo '<script>alert("Artist already exists!");</script>';
         }
     }
-    public function getArtistByID($conn,$ID){
-        $sql = "select * from artist where ID=$ID";
-        $result = $conn->query($sql);
-
-        if ($result->num_rows > 0) {
-            $row = $result->fetch_assoc();
-            return new User(
-                $row['ID'],
-                $row['emriMbiemri'],
-                $row['gender'],
-                $row['email'],
-                $row['password'],
-                $row['role']
-            );
-        } else {
-            return null; // Artist not found
-        }
-    }
+    
     public function deleteArtist($conn) {
         $conn -> query("delete from artist where ID = '$this->ID'");
     }
