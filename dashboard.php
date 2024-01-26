@@ -43,6 +43,7 @@
                     <h1 class="title">CONTACT US</h1>
                     <button class="user_artists_button" onclick="window.location.href='readContact.php'">See All</button>    
             </div>
+
             
         </div>
     </body>
