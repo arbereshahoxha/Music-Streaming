@@ -1,0 +1,70 @@
+body,html{
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
+    margin:0;
+    overflow: hidden;
+    font-family: 'Sora', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    align-items: center;
+}
+header{
+    width: 100%;
+    min-height: 120px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header > h1{
+    color: pink;
+    font-weight: bolder;
+    font-size: 24;
+}
+
+img {
+    margin-left: 20px;
+    max-width: 50px;
+}
+
+.contactUs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: start;
+    margin: auto;
+}
+form > input {
+    background-color: #807c7cde;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 3px solid pink;
+    border-radius: 5px;
+    height: 20px;
+}
+form > label{
+    color: #807c7cde;
+    font-size: 20px;
+}
+textarea{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    background-color: #807c7cde;
+    border: 2px solid pink;
+    border-radius: 5px;
+    width: 400px;
+}
+button{
+    margin-top: 15px;
+    background-color: pink;
+    border: none;
+    border-radius: 5px;
+}

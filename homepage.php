@@ -66,7 +66,7 @@
                 <label id="aboutus" onclick="loadContent('dynamicDiv/popular-artist.php')">Artists</label>
                 <label id="uploadsongs" onclick="window.location.href = 'artistDashboard.php'" class="<?php echo $hideYourSongs ?>">Upload Songs</label>
                 <label id="dashboard" onclick="window.location.href = 'dashboard.php'" class="<?php echo $hideDashboard ?>">Dashboard</label>
-                <label id="aboutus">About Us</label>                
+                <label id="aboutus" onclick="window.location.href='contactUs.php'">Contact Us</label>                
             </form>
         </div>
         <!-- Main page -->

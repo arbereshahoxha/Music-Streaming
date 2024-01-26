@@ -39,6 +39,10 @@
                     <button class="user_artists_button" onclick="window.location.href='readArtist.php'">See All</button>    
                     <button class="user_artists_button" onclick="window.location.href='createArtist.php'">NEW</button>
             </div>
+            <div class="users_artists_div">
+                    <h1 class="title">CONTACT US</h1>
+                    <button class="user_artists_button" onclick="window.location.href='readContact.php'">See All</button>    
+            </div>
             
         </div>
     </body>
