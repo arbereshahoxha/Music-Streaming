@@ -19,11 +19,11 @@
             0, //Random ID for constructor
             $_POST['songName'],
             $_SESSION["emriMbiemri"],
-            $_POST['songImage'],
+            $_POST['songName'],
             "nomedia",
             $_SESSION['ID']);
 
-        $song->addToDatabase($conn);
+        $song->addToDatabase($conn, 'songImage');
     }
 ?>
 
@@ -40,7 +40,7 @@
             <button id="logOutButton" name="logOutButton" onclick="window.location.href='logout.php'">Log Out</button>
         </header>
         
-        <form action="<?php echo ($_SERVER['PHP_SELF']); ?>" method="POST" onsubmit="return validateForm()">
+        <form action="<?php echo ($_SERVER['PHP_SELF']); ?>" method="POST" onsubmit="return validateForm()" enctype="multipart/form-data">
             <h1>Add Song</h1>
             <label for="songName">Song Name</label>
             <input type="text" id="songName" name="songName" required>

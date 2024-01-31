@@ -15,23 +15,17 @@
         }
     }
     include("dynamicDiv/song.php");
-    $songID;
+    $songID = null;
+    $song = null;
     if (isset($_POST['id'])) {
         $songID = $_POST['id'];
-
+        $song = getSongByID($conn, $songID);
     } else {
         echo "Invalid ID";
     }
-    $song = getSongByID($conn, $songID);
-    
-    if(isset($_POST['submit'])){
-        $ID = $_POST['ID'];
-        $coverPhoto = $_POST['coverPhoto'];
-        $emri = $_POST['emri'];
-        $description = $_POST['description'];
-        $readMore = $_POST['readMore'];
     
     
+    if(isset($_POST['submit'])){    
         $editedSong = new Song(
                             $_POST['songId'],
                             $_POST['songName'],
@@ -39,8 +33,9 @@
                             $_POST['songImage'],
                             $_POST['songMedia'],
                             $_POST['authorID']);
-        $editedSong -> editSong($conn);
-        header("location:dashboard.php");
+                            echo $editedSong;
+        $editedSong -> editSong($conn, 'songImage');
+        header("location:readSongs.php");
     }
 
 ?>
@@ -58,7 +53,7 @@
             <button id="logOutButton" name="logOutButton" onclick="window.location.href='logout.php'">Log Out</button>
         </header>
         
-        <form action="<?php echo ($_SERVER['PHP_SELF']); ?>" method="POST" onsubmit="return validateForm()">
+        <form action="<?php echo ($_SERVER['PHP_SELF']); ?>" method="POST" onsubmit="return validateForm()" enctype='multipart/form-data'">
             <h1>Add Song</h1>
             <input type="hidden" id="songId" name="songId" value="<?= $song->getID()?>">
 
@@ -69,10 +64,10 @@
             <input type="text" id="songAuthor" name="songAuthor" value="<?= $song->getSongAuthors()?>" required>
 
             <label for="songImage">Song Image</label>
-            <input type="file" id="songImage" name="songImage" value="<?= $song->getSongImage()?>"  required>
+            <input type="file" id="songImage" name="songImage" required>
 
             <label for="songMedia">Song Media</label>
-            <input type="text" id="songAuthor" name="songAuthor" value="<?= $song->getSongMedia()?>" required>
+            <input type="text" id="songMedia" name="songMedia" value="<?= $song->getSongMedia()?>" required>
 
             <input type="hidden" id="authorID" name="authorID" value="<?= $song->getAuthorID()?>">
 

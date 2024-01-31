@@ -83,3 +83,7 @@ img {
     font-weight: bold;
 /*    font-family: 'Sora', sans-serif;*/
 }
+.artistimg {
+    max-width: 60px;
+    max-height: 60px;
+}

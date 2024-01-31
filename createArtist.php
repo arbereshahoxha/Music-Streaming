@@ -20,13 +20,13 @@ if (isset($_POST['submit'])) {
     //Krijo nje artist te ri nga post
     $artist = new Artist(
         0, //Random ID for constructor
-        $_POST['coverPhoto'],
+        0, //No value needed the file is stored in $_FILES['coverPhoto']
         $_POST['emri'],
         $_POST['description'],
         $_POST['readMore']
     );
     
-    $artist->addToDatabase($conn);
+    $artist->addToDatabase($conn, 'coverPhoto');
 }?>
 
 
@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
             <h1>RATATUNES CREATE ARTIST</h1>
             <button id="logOutButton" name="logOutButton" onclick="window.location.href='logout.php'">Log Out</button>
         </header>
-        <form action="<?php echo ($_SERVER['PHP_SELF']); ?>" method="POST" >
+        <form action="<?php echo ($_SERVER['PHP_SELF']); ?>" method="POST" enctype="multipart/form-data">
         <h1>Create Artist</h1>
         <label for="coverPhoto">Cover Photo</label>
         <input type="file" id="coverPhoto" name="coverPhoto" accept="image/*"/>

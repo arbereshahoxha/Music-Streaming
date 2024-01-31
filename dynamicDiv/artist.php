@@ -45,7 +45,7 @@
     }
     public function displayArtist(){
         echo "<div class='artists-artist'>";
-        echo " <img src='Artists/$this->coverPhoto'>";
+        echo "<img src='data:image/*;base64," . base64_encode($this->coverPhoto) . "' alt='artist-image'>";
         echo " <div class='artists-description'>";
         echo "<h3>$this->emri</h3>";
         echo "<p>$this->description</p>";
@@ -69,10 +69,11 @@
             return true; //Ekziston ne databaze
         }
     }
-    public function addToDatabase($conn) {
+    public function addToDatabase($conn, $coverPhoto) {
         if (!$this->ekziston($conn)) {
             //nese nuk ekziston ne databaze
             //shto ne databaze
+            $this->coverPhoto = addslashes(file_get_contents($_FILES[$coverPhoto]['tmp_name']));
             $sql = "INSERT INTO artist(coverPhoto, emri, description, readMore) VALUES('$this->coverPhoto', '$this->emri', '$this->description', '$this->readMore')";
             $result = mysqli_query($conn, $sql);
             if ($result) {
@@ -91,7 +92,8 @@
     public function deleteArtist($conn) {
         $conn -> query("delete from artist where ID = '$this->ID'");
     }
-    public function editArtist($conn) {
+    public function editArtist($conn, $coverPhoto) {
+        $this->coverPhoto = addslashes(file_get_contents($_FILES[$coverPhoto]['tmp_name']));
 	    $sql = "UPDATE artist SET coverPhoto='$this->coverPhoto',emri='$this->emri',description='$this->description',readMore='$this->readMore' where ID='$this->ID'";
 	    $conn -> query($sql);
     }

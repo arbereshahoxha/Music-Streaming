@@ -2,8 +2,8 @@
 
 include("dynamicDiv/song.php");
 
-if (isset($_POST['ID'])) {
-    $songID = $_POST['ID'];
+if (isset($_POST['id'])) {
+    $songID = $_POST['id'];
     $song = getSongByID($conn,$songID);
     $song -> deleteSong($conn);
     header("location: readSongs.php");

@@ -16,7 +16,7 @@ if(isset($_POST['submit'])){
 
 
     $artist = new Artist($ID,$coverPhoto,$emri,$description,$readMore);
-    $artist -> editArtist($conn);
+    $artist -> editArtist($conn, 'coverPhoto');
     header("location:readArtist.php");
 }
 
@@ -33,13 +33,13 @@ if(isset($_POST['submit'])){
             <h1>RATATUNES EDIT ARTIST</h1>
             <button id="logOutButton" name="logOutButton" onclick="window.location.href='logout.php'">Log Out</button>
         </header>
-        <form action="" method="POST" >
+        <form action="<?php echo ($_SERVER['PHP_SELF']); ?>" method="POST" enctype='multipart/form-data'>
 
         <label for="id">ID :</label>
         <input type="text" id="ID" name="ID" value="<?=$artist->getID() ?>" required>
 
         <label for="coverPhoto">Cover Photo</label>
-        <input type="file" id="coverPhoto" name="coverPhoto" value="<?=$artist->getCoverPhoto() ?>" accept="image/*"/>
+        <input type="file" id="coverPhoto" name="coverPhoto" value="" accept="image/*"/>
 
         <label for="emri">Name :</label>
         <input type="text" id="emri" name="emri" value="<?=$artist->getEmri() ?>" required>

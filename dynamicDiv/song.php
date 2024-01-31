@@ -56,7 +56,7 @@
         }
 
         public function __toString() {
-            return $this->songName." - ".$this->songAuthors;
+            return $this->songName." - ".$this->songAuthors.$this->songMedia;
         }
         public function displaySong() {
             if ($this->songMedia == "nomedia") {
@@ -64,7 +64,7 @@
             } else {
                 echo "<div class='songs-kanget'". "onclick='playSong(`".$this->songMedia."`)'>";
             }
-            echo "<img src='fotot/$this->songImage' alt='song-image'>";
+            echo "<img src='data:image/*;base64," . base64_encode($this->songImage) . "' alt='song-image'>";
             echo "<h2>$this->songName</h2>";
             echo "<p>$this->songAuthors</p>";
             echo "</div>";
@@ -82,8 +82,9 @@
             }
         }
 
-        public function addToDatabase($conn) {
+        public function addToDatabase($conn, $imageName) {
             if(!$this->ekziston($conn)) {
+                $this->songImage = addslashes(file_get_contents($_FILES[$imageName]['tmp_name']));
                 $sql = "INSERT INTO song(songName, songAuthors, songImage, songMedia, artistID) VALUES('$this->songName','$this->songAuthors', '$this->songImage', '$this->songMedia', '$this->authorID')";
                 $result = mysqli_query($conn, $sql);
 
@@ -103,7 +104,8 @@
             $conn -> query("DELETE from song where id = $this->id");
         }
 
-        public function editSong($conn) {
+        public function editSong($conn, $imageName) {
+            $this->songImage = addslashes(file_get_contents($_FILES[$imageName]['tmp_name']));
             $sql = "UPDATE song SET songName='$this->songName',songAuthors='$this->songAuthors', songImage='$this->songImage', songMedia='$this->songMedia' where id='$this->id'";
 	        $conn -> query($sql);
         }
@@ -136,7 +138,7 @@
 
         while ($row = $result->fetch_assoc()) {
             $song = new Song(
-                $row["ID"],
+                $row["id"],
                 $row["songName"],
                 $row["songAuthors"],
                 $row["songImage"],
@@ -148,7 +150,7 @@
                     <td>{$song->getID()}</td>
                     <td>{$song->getSongName()}</td>
                     <td>{$song->getSongAuthors()}</td>
-                    <td>{$song->getSongImage()}</td>
+                    <td><img src='data:image/*;base64," . base64_encode($song->getSongImage()) . "' alt='song-image'></td>
                     <td>{$song->getSongMedia()}</td>
                     <td>{$song->getAuthorID()}</td>
                     <td>
@@ -189,7 +191,7 @@
                         <td>{$song->getID()}</td>
                         <td>{$song->getSongName()}</td>
                         <td>{$song->getSongAuthors()}</td>
-                        <td>{$song->getSongImage()}</td>
+                        <td><img src='data:image/*;base64," . base64_encode($song->getSongImage()) . "' alt='song-image'></td>
                         <td>{$song->getSongMedia()}</td>
                         <td>{$song->getAuthorID()}</td>
                         <td>

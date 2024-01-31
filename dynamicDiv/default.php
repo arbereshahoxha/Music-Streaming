@@ -39,7 +39,7 @@
 <!-- Genres -->
 <div id="home-genres">
     <div class="home-genre-box" id="home-Trending">
-        <a onclick="loadContent('/dynamicDiv/genres.php')">
+        <a onclick="loadContent('/dynamicDiv/songslist.php')">
             <div class="home-genre">
                 <p>Trending</p>
             </div>
@@ -47,7 +47,7 @@
     </div>
             
 <div class="home-genre-box" id="home-For-You">
-    <a onclick="loadContent('dynamicDiv/genres.php')">
+    <a onclick="loadContent('dynamicDiv/songslist.php')">
         <div class="home-genre">
             <p>For You</p>
         </div>
@@ -55,7 +55,7 @@
 </div>
             
 <div class="home-genre-box" id="home-Pop">
-    <a onclick="loadContent('dynamicDiv/genres.php')">
+    <a onclick="loadContent('dynamicDiv/songslist.php')">
         <div class="home-genre">
             <p>Pop</p>
         </div>
@@ -63,7 +63,7 @@
 </div>
                         
 <div class="home-genre-box" id="home-Hip-Hop">
-    <a onclick="loadContent('dynamicDiv/genres.php')">
+    <a onclick="loadContent('dynamicDiv/songslist.php')">
         <div class="home-genre">
             <p>Hip-Hop</p>
         </div>
@@ -71,7 +71,7 @@
 </div>
             
 <div class="home-genre-box" id="home-Mood">
-    <a onclick="loadContent('dynamicDiv/genres.php')">
+    <a onclick="loadContent('dynamicDiv/songslist.php')">
         <div class="home-genre">
             <p>Mood</p>
         </div>

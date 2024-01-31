@@ -47,7 +47,7 @@ else{
                 echo"
                 <tr>
                     <td>$row[ID]</td>
-                    <td>$row[coverPhoto]</td>
+                    <td><img src='data:image/*;base64," . base64_encode($row['coverPhoto']) . "' alt='artist-image'></td>
                     <td>$row[emri]</td>
                     <td>$row[description]</td>
                     <td>$row[readMore]</td>
