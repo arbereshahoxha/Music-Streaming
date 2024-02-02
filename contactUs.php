@@ -3,10 +3,10 @@ include("dynamicDiv/db.php");
 
 if(isset($_POST['submit'])){
     $fullName = $_POST['fullName'];
-    $email = $_POST['email'];
+    $subject = $_POST['subject'];
     $message = $_POST['message'];
 
-    $sql = "INSERT INTO contact(fullName,email,message) values('$fullName','$email','$message')";
+    $sql = "INSERT INTO contact(fullName,subject,message) values('$fullName','$subject','$message')";
     $result = mysqli_query($conn,$sql);
     if ($result) {
         echo '<script>alert("Your message has been recorded sucesully");</script>';
@@ -36,8 +36,8 @@ if(isset($_POST['submit'])){
         <label for="fullName">Enter full name :</label>
         <input id="fullName" type="text" name="fullName" required>
 
-        <label for="email">Enter email :</label>
-        <input type="email" id="email" name="email" required>
+        <label for="email">Subject :</label>
+        <input type="text" id="subject" name="subject" required>
 
         <label for="message">Message :</label>
         <textarea name="message" id="message" cols="30" rows="10" required></textarea>

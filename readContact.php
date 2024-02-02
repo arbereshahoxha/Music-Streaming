@@ -33,7 +33,7 @@
             <tr>
                 <th>ID</th>
                 <th>First and Last Name</th>
-                <th>Email</th>
+                <th>Subject</th>
                 <th>Message</th>
                 <th>Action</th>
             </tr>
@@ -47,7 +47,7 @@
                     <tr>
                         <td>$row[ID]</td>
                         <td>$row[fullName]</td>
-                        <td>$row[email]</td>
+                        <td>$row[subject]</td>
                         <td>$row[message]</td>
                         <td>
                             <form action='deleteContact.php' method='POST'>
