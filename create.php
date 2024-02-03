@@ -44,7 +44,7 @@ if (isset($_POST['submit'])) {
             <button id="logOutButton" name="logOutButton" onclick="window.location.href='logout.php'">Log Out</button>
         </header>
         
-        <form action="<?php echo ($_SERVER['PHP_SELF']); ?>" method="POST" onsubmit="return validateForm()">
+        <form onsubmit="return validateUser()" action="<?php echo ($_SERVER['PHP_SELF']); ?>" method="POST">
             <h1>Create User</h1>
             <label for="emriMbiemri">First & Last Name</label>
             <input type="text" id="emriMbiemri" name="emriMbiemri" required>
@@ -62,12 +62,12 @@ if (isset($_POST['submit'])) {
             <label for="password">Password</label>
             <input type="password" id="password" name="password" required>
 
-            <label for="role">Password</label>
+            <label for="role">Role</label>
             <input type="text" id="role" name="role" required>
 
             <button type="submit" name="submit">Create User</button>
         </form>
-<script src="script.js"></script>
+        <script src="scripts/script.js"></script>
     </body>
 </html>
 <?php } ?>

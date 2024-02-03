@@ -40,7 +40,7 @@
             <button id="logOutButton" name="logOutButton" onclick="window.location.href='logout.php'">Log Out</button>
         </header>
         
-        <form action="<?php echo ($_SERVER['PHP_SELF']); ?>" method="POST" onsubmit="return validateForm()" enctype="multipart/form-data">
+        <form onsubmit="return validateSong()" action="<?php echo ($_SERVER['PHP_SELF']); ?>" method="POST" enctype="multipart/form-data">
             <h1>Add Song</h1>
             <label for="songName">Song Name</label>
             <input type="text" id="songName" name="songName" required>
@@ -51,5 +51,6 @@
 
             <button type="submit" name="submit">Add Song</button>
         </form>
+        <script src="scripts/script.js"></script>
     </body>
 </html>

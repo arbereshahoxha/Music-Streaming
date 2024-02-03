@@ -1,12 +1,15 @@
 <?php
+session_start();
+
 include("dynamicDiv/db.php");
 
 if(isset($_POST['submit'])){
     $fullName = $_POST['fullName'];
     $subject = $_POST['subject'];
     $message = $_POST['message'];
+    $userEmail = $_SESSION['email'];
 
-    $sql = "INSERT INTO contact(fullName,subject,message) values('$fullName','$subject','$message')";
+    $sql = "INSERT INTO contact(fullName,subject,message,userEmail) values('$fullName','$subject','$message','$userEmail')";
     $result = mysqli_query($conn,$sql);
     if ($result) {
         echo '<script>alert("Your message has been recorded sucesully");</script>';

@@ -1,5 +1,7 @@
 <?php
     session_start();
+    $userRole = $_SESSION['role'];
+    $email = $_SESSION['email'];
     if(!isset($_SESSION['email']))
       header("location:loginpage.php");
     else{
@@ -35,6 +37,7 @@
                 <th>First and Last Name</th>
                 <th>Subject</th>
                 <th>Message</th>
+                <th>Author</th>
                 <th>Action</th>
             </tr>
             <?php
@@ -49,8 +52,11 @@
                         <td>$row[fullName]</td>
                         <td>$row[subject]</td>
                         <td>$row[message]</td>
+                        <td>$row[userEmail]</td>
+                        
                         <td>
                             <form action='deleteContact.php' method='POST'>
+                                <input type='hidden' name='user_email' value='<?php echo $_SESSION[email]; ?>'>
                                 <input type='hidden' name='ID' value='$ID'>
                                 <button type='submit' name='delete'>Delete</button>
                             </form>

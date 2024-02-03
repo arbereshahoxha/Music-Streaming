@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
             <h1>RATATUNES CREATE ARTIST</h1>
             <button id="logOutButton" name="logOutButton" onclick="window.location.href='logout.php'">Log Out</button>
         </header>
-        <form action="<?php echo ($_SERVER['PHP_SELF']); ?>" method="POST" enctype="multipart/form-data">
+        <form  onsubmit="return validateArtist()" action="<?php echo ($_SERVER['PHP_SELF']); ?>" method="POST" enctype="multipart/form-data">
         <h1>Create Artist</h1>
         <label for="coverPhoto">Cover Photo</label>
         <input type="file" id="coverPhoto" name="coverPhoto" accept="image/*"/>
@@ -57,7 +57,10 @@ if (isset($_POST['submit'])) {
 
         <button type="submit" name="submit">Create Artist</button>
         </form>
+
+        <script src="scripts/script.js"></script>
     </body>
+
 </html>
 
 <?php } ?>

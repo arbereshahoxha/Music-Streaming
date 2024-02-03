@@ -91,7 +91,7 @@ if(isset($_POST["LogInButton"])){
                         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
                             <input type="text" name="email" placeholder="Email">
                             <input type="password" name="password" placeholder="Password">
-                            <button name="LogInButton">Log In</button>
+                            <button type="submit" name="LogInButton">Log In</button>
                         </form>
                     </div>
                 </div>
@@ -106,6 +106,7 @@ if(isset($_POST["LogInButton"])){
                 </div>
             </div>
         </div>
+        <script src="scripts/script.js"></script>
         
     </body>
 </html>
