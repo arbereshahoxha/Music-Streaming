@@ -54,7 +54,7 @@
 </head>
 <body>
     <header>
-        <p>RATATUNES</p>
+        <h1>RATATUNES</h1>
         <button id="logOutButton" name="logOutButton" onclick="window.location.href='logout.php'">Log Out</button>
     </header>
     <div id="home-main-content">
@@ -96,7 +96,6 @@
             </div>
             
             <div id="home-volumeControls">
-                <output id="home-volume-output">100</output>
                 <button class="home-playerButton" id="home-mute-button"><img src="icons/volume-button.png" alt="play/pause" id="home-mute-icon"></button>
                 <input type="range" class="home-shortSlider" id="home-volume-slider" max="100" value="100">
             </div>

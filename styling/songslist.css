@@ -38,7 +38,9 @@
 }
 .songs-kanget:hover{
     background-color: #262626;
+    cursor: pointer;
 }
 .songs-kanget:hover img{
     transform: scale(1.2);
+    cursor: pointer;
 }

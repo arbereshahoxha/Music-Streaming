@@ -59,7 +59,6 @@ const muteButton = document.getElementById("home-mute-button");
 const muteIconContainer = document.getElementById("home-mute-icon");
 const seekSlider = document.getElementById("home-seek-slider");
 const volumeSlider = document.getElementById("home-volume-slider");
-const outputContainer = document.getElementById("home-volume-output");
 
 const songInformation = document.getElementById("home-song-information");
 const songImage = document.getElementById("home-now-playing-img");
@@ -243,8 +242,6 @@ audio.addEventListener('timeupdate', () => {
 //User changes volume
 volumeSlider.addEventListener('input', (e) => {
     const value =e.target.value;
-
-    outputContainer.textContent = value;
     audio.volume = value/100;
 });
 
